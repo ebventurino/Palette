@@ -1,46 +1,58 @@
-import React from 'react';
+import APIManager from "./APIManager"
+import React, { Component } from "react"
 
-export default class Form extends React.Component {
+export default class LoginForm extends Component {
     state = {
-        email: '',
-        password:''
-    };
+        email: " ",
+        password: " "
+    }
 
-    change = e =>{
-        this.setState({
-            [e.target.name]: e.target.value
-        });
-    };
-//on click, will clear form
-onSubmit = (e) => {
-    e.preventDefault();
-    this.props.onSubmit(this.state);
-    this.setState({
-        email: '',
-        password:''
-    });
-}
+    // Update state whenever an input field is edited
+    handleFieldChange = (evt) => {
+        const stateToChange = {}
+        stateToChange[evt.target.id] = evt.target.value
+        this.setState(stateToChange)
+    }
 
+    // Simplistic handler for login submit
+    handleLogin = (e) => {
+        e.preventDefault()
 
-render () {
-    return (
-        <form>
-            <input 
-                name='email'
-                placeholder='email' 
-                value={this.state.firstName}
-                onChange={e => this.setState({firstName: e.target.value})}
-                onChange={e => this.change(e)}/>
-            <input 
-            name='password'
-            type='password'
-            placeholder='Password' 
-            value={this.state.firstName} 
-            onChange={e => this.setState({email: e.target.value})}
-            onChange={e =>this.change(e)}/>
-
-            <button onClick={e => this.onSubmit(e)}>Submit</button>
+        /*
+            For now, just store the email and password that
+            the customer enters into local storage.
+        */
+        localStorage.setItem(
+            "credentials",
+            JSON.stringify({
+                email: this.state.email,
+                password: this.state.password
+            })
+        )
+    }
+        //render the form
+    render() {
+        return (
+            <form onSubmit={this.handleLogin}>
+                <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
+                <label htmlFor="inputEmail">
+                    Email address
+                </label>
+                <input onChange={this.handleFieldChange} type="email"
+                    id="email"
+                    placeholder="Email address"
+                    required="" autoFocus="" />
+                <label htmlFor="inputPassword">
+                    Password
+                </label>
+                <input onChange={this.handleFieldChange} type="password"
+                    id="password"
+                    placeholder="Password"
+                    required="" />
+                <button type="submit">
+                    Sign in
+                </button>
             </form>
-    )
-}
+        )
+    }
 }
