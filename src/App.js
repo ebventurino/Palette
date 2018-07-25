@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './PaletteLogo.jpg';
 import './App.css';
+import Form from './LoginForm'
 
 class App extends Component {
+  onSubmit = (fields) => {
+    console.log('App comp got: ', fields);
+  }
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <Form onSubmit={fields => this.onSubmit(fields)}/>
+        </div>
+      
+
     );
+    
   }
 }
+
 
 export default App;
