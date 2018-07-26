@@ -3,7 +3,6 @@ import '../App.css';
 import axios from 'axios'
 import PhotoList from './PhotoList';
 import logo from '../PaletteLogo.jpg'
-import Photo from './Photo'
 
 export default class Photos extends Component {
 
@@ -36,11 +35,6 @@ export default class Photos extends Component {
       .then(e => e.json())
       .then(photos => this.setState({ photos: photos }))
     }
-
-
-
-
-
 
 
   render() {

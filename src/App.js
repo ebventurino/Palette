@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-import Login from './Login'
 import ApplicationViews from './ApplicationViews'
 import NavBar from './nav/NavBar'
 // import NavBar from './nav/NavBar'

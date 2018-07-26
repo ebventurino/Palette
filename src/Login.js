@@ -1,4 +1,4 @@
-import APIManager from "./APIManager"
+
 import React, { Component } from "react"
 import logo from './PaletteLogo.jpg';
 

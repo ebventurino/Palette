@@ -5,14 +5,15 @@ const PhotoList = props => {
 
   const results = props.data;
   let photos = results.map(photo => 
-     <Photo url={photo.urls.small}/>
+     <Photo url={photo.urls.small}
+     key={photo.id}/>
   );
     //  let gifs = results.map(title =>
     // <Gif url={gif.title})
   
   return(
     <ul className="photo-list">
-      {photos}
+      {photos }
     </ul> 
   
   );
