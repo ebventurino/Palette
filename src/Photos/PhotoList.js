@@ -14,6 +14,7 @@ const PhotoList = props => {
     <ul className="photo-list">
       {photos}
     </ul> 
+  
   );
 }
 
