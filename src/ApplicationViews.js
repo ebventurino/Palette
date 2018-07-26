@@ -6,6 +6,8 @@ import Welcome from './Welcome'
 
 
 export default class ApplicationViews extends Component {
+    isAuthenticated = () => localStorage.getItem("credentials") !== null
+    
     render() {
         return (
             <React.Fragment>
@@ -16,3 +18,4 @@ export default class ApplicationViews extends Component {
         )
     }
 }
+
