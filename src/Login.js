@@ -1,7 +1,7 @@
 import APIManager from "./APIManager"
 import React, { Component } from "react"
 
-export default class LoginForm extends Component {
+export default class Login extends Component {
     state = {
         email: " ",
         password: " "

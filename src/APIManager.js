@@ -1,12 +1,13 @@
 //login
-const Database = Object.create({}, {
+const ApiManager = Object.create({}, {
 
-    getUserByUserName: {
+getUserByUserName: {
     value: (userName) => {
         return fetch(`http://localhost:5002/users?userName=${userName}`)
             .then(e => e.json())
     }
 },
+
 getIdOfCurrentUser: {
     value: () => {
     const databaseString = localStorage.getItem("credentials")
@@ -16,4 +17,4 @@ getIdOfCurrentUser: {
     }
 }
 })
-export default Database
+export default ApiManager
