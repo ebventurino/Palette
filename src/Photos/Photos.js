@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import axios from 'axios'
-import GifList from './GifList';
+import PhotoList from './PhotoList';
 import logo from '../PaletteLogo.jpg'
 
 export default class Photos extends Component {
@@ -9,7 +9,7 @@ export default class Photos extends Component {
   constructor() {
     super();
     this.state = {
-      gifs: []
+      photos: []
     };
   } 
  
@@ -17,7 +17,7 @@ export default class Photos extends Component {
     axios.get('https://api.unsplash.com/photos/?client_id=34b1a6b2a6c2a9b3f6af5e39a76c9943bdbbaf10bd455336f70e98ca31250475&per_page=30')
       .then (response => {
         this.setState({
-          gifs: response.data
+          photos: response.data
         });
       })
       .catch(error => {
@@ -28,7 +28,7 @@ export default class Photos extends Component {
 
 
   render() { 
-    console.log(this.state.gifs)
+    console.log(this.state.photos)
     return (
       <div>
         <div className="main-header">
@@ -38,7 +38,7 @@ export default class Photos extends Component {
           </div>   
         </div>    
         <div className="main-content">
-          <GifList data={this.state.gifs}/>
+          <PhotoList data={this.state.photos}/>
         </div>
       </div>
     );
