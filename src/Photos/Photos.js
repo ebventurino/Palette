@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../App.css';
 import axios from 'axios'
 import GifList from './GifList';
-import logo from './PaletteLogo.jpg'
+import logo from '../PaletteLogo.jpg'
 
 export default class Photos extends Component {
   
@@ -14,7 +14,7 @@ export default class Photos extends Component {
   } 
  
   componentDidMount() {
-    axios.get('https://api.unsplash.com/photos/?client_id=34b1a6b2a6c2a9b3f6af5e39a76c9943bdbbaf10bd455336f70e98ca31250475')
+    axios.get('https://api.unsplash.com/photos/?client_id=34b1a6b2a6c2a9b3f6af5e39a76c9943bdbbaf10bd455336f70e98ca31250475&per_page=30')
       .then (response => {
         this.setState({
           gifs: response.data

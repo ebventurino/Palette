@@ -2,7 +2,7 @@ import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import Login from "./Login"
 import App from "./App"
-import Photos from "./Photos"
+import Photos from "./Photos/Photos"
 
 
 export default class ApplicationViews extends Component {
