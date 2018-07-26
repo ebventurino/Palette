@@ -1,16 +1,23 @@
-import React, { Component } from "react"
-import { Link } from "react-router-dom"
-import "./NavBar.css"
 
+import React from 'react';
+import { Nav, NavItem, NavLink } from 'reactstrap';
 
-export default class NavBar extends Component {
-    render() {
-        return (
-            <nav>
-                <Link to="/">Photos</Link>
-                <Link to="/Refs">References</Link>
-            </nav>
-        )
-    }
+export default class Example extends React.Component {
+  render() {
+    return (
+      <div>
+        <Nav vertical>
+          <NavItem>
+            <NavLink href="/">Photos</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/Refs">References</NavLink>
+          </NavItem>
+        </Nav>
+        <hr />
+        <Nav vertical>
+        </Nav>
+      </div>
+    );
+  }
 }
-
