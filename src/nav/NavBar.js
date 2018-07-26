@@ -7,8 +7,7 @@ export default class NavBar extends Component {
     render() {
         return (
             <nav>
-                <Link to="/">Welcome</Link>
-                <Link to="/Inspiration">Inspiration</Link>
+                <Link to="/">Photos</Link>
                 <Link to="/Refs">References</Link>
             </nav>
         )

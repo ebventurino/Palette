@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Login from './Login'
 import ApplicationViews from './ApplicationViews'
 import NavBar from './nav/NavBar'
-import Welcome from './Welcome'
+import Photos from './Photos'
 // import NavBar from './nav/NavBar'
 
 

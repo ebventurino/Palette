@@ -2,7 +2,7 @@ import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import Login from "./Login"
 import App from "./App"
-import Welcome from "./Welcome"
+import Photos from "./Photos"
 
 
 export default class ApplicationViews extends Component {
@@ -14,7 +14,7 @@ export default class ApplicationViews extends Component {
             <React.Fragment>
                 <Route exact path="/" render={props => {
                     if (this.isAuthenticated()) {
-                        return <Welcome />
+                        return <Photos />
                         
                     } else {
                         return <Login{...props}/>
