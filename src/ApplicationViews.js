@@ -2,6 +2,8 @@ import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import Login from "./Login"
 import Photos from "./Photos/Photos"
+import App from "./App"
+import Favorites from "./Favorites/Favorites"
 
 
 export default class ApplicationViews extends Component {
@@ -19,6 +21,9 @@ export default class ApplicationViews extends Component {
                         return <Login{...props}/>
                     }
                 }} />
+                <Route path="/App" component={App} />
+                <Route path="Favorites/Favorites" component={Favorites} />
+            
             </React.Fragment>
         )
     }

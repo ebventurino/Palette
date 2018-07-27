@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ApplicationViews from './ApplicationViews'
 import NavBar from './nav/NavBar'
+import Favorites from './Favorites/Favorites'
 // import NavBar from './nav/NavBar'
 
 
@@ -13,6 +14,7 @@ class App extends Component {
       <React.Fragment>
         <NavBar />
         <ApplicationViews />
+        <Favorites />
       </React.Fragment>
 
     );
