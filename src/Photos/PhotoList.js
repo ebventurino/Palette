@@ -11,10 +11,18 @@ const PhotoList = props => {
     //  let gifs = results.map(title =>
     // <Gif url={gif.title})
   
+  
+  
+  
   return(
+    <React-fragment>
     <ul className="photo-list">
-      {photos }
+      {photos}
     </ul> 
+    
+     
+   </React-fragment>
+
   
   );
 }
