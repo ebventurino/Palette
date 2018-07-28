@@ -29,41 +29,15 @@ const ApiManager = Object.create({}, {
         }
     },
     getAllFavorites: {
-        value: () => {
-            return fetch("http://localhost:5002/favorites?completed=false")
+        value: (photoUrl) => {
+            return fetch("http://localhost:5002/favorites?photoUrl")
                 .then(e => e.json())
+                .then(favorites => this.setState({ favorites: favorites }))
         }
-    },
-
+    }
     
     
-    // //passing in id, getting tasks and setting state
-    // completeTask = (passingIn) => {
-    //     console.log(Database.updateOneItem)
-    //     Database.updateOneItem(passingIn)
-    //         .then((gettingTasks) => {
-    //             console.log(gettingTasks, "getting tasks")
-    //             Database.getAllTasks()
-    //                 .then(tasks => this.setState({ tasks: tasks }))
-
-    //         })
-    // },
-    // // posting tasks to the dom
-    // addTask(event) {
-    //     event.preventDefault()
-    //     const newObject = { name: this.state.TaskName, DueDate: this.state.DueDate, completed: false }
-    //     fetch("http://localhost:5002/tasks", {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/json" },
-    //         body: JSON.stringify(newObject)
-    //     })
-    //         // When POST is finished, retrieve the new list of tasks
-    //         .then(() => {
-    //             Database.getAllTasks()
-    //                 .then(tasks => this.setState({ tasks: tasks }))
-    //         }
-    //         )
-    // }
+    
 })
 
 
