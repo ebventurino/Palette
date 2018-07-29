@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import ApiManager from '../APIManager'
 import axios from 'axios'
 import logo from '../PaletteLogo.jpg'
+import Favorite from './Favorite'
 import SingleFavorite from './SingleFavorite'
+
 // import FavoriteList from './FavoriteList'
 export default class Favorites extends Component {
     
@@ -17,8 +19,9 @@ export default class Favorites extends Component {
       }
     
       componentDidMount() {
-        axios.get('http://localhost:5002/favorites?photoUrl')
+        axios.get('http://localhost:5002/favorites')
           .then (response => {
+            console.log(response,"RESONSE")
             this.setState({
               favorites: response.data
             });
@@ -29,17 +32,24 @@ export default class Favorites extends Component {
       }
     
 
-    render() {
+      render() {
         console.log(this.state.favorites)
-        return(
-       
-       
-            <div>
-                <h1> Hello </h1>
-                <SingleFavorite data={this.state.favorites}/>
+        return (
+          <div>
+            <div className="main-header">
+              <div className="inner">
+                <img src={logo} className="App-logo" alt="logo" />
+    
+              </div>
+            </div>
+            <div className="main-content">
+              <SingleFavorite data={this.state.favorites} />
+    
+            </div>
           </div>
     
-        )
+        );
+    
       }
     
     }

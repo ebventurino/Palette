@@ -1,23 +1,23 @@
 import React from 'react';
-import Favorites from './Favorites'
+import Favorite from './Favorite'
 import APIManager from '../APIManager'
 
 const SingleFavorite = props => {
 
     const results = props.data;
-    let favorite = results.map(favorite =>
+    let allFavorites = results.map(favorites =>
 
-        <Favorites url={favorite.photoUrl}
-            key={favorite.id}
+        <Favorite url={favorites.photoUrl}
+            key={favorites.id}
             getAllFavorites={APIManager.getAllFavorites}
-            favorite={favorite} />
+            favorites={favorites} />
+    );console.log(allFavorites,"GET ALL FAVORITES")
 
-    );
 
     return (
         <React-fragment>
             <ul className="photo-list">
-                {favorite}
+                {allFavorites}
             </ul>
 
 

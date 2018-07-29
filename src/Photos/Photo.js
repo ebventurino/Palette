@@ -7,6 +7,7 @@ const Photo = props => {
    photoId: props.photo.id,
    photoUrl: props.url
  }
+ console.log(gettingPhotos,"gettingPhotos")
 
   return (
   <li className="gif-wrap">

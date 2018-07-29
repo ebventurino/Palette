@@ -30,7 +30,7 @@ const ApiManager = Object.create({}, {
     },
     getAllFavorites: {
         value: (photoUrl) => {
-            return fetch("http://localhost:5002/favorites?photoUrl")
+            return fetch("http://localhost:5002/favorites")
                 .then(e => e.json())
                 .then(favorites => this.setState({ favorites: favorites }))
         }
