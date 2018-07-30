@@ -28,3 +28,5 @@ const SingleFavorite = props => {
 }
 
 export default SingleFavorite;
+
+
