@@ -1,22 +1,19 @@
 import React from 'react';
-import APIManager from '../APIManager'
 
 
 const Favorite = props => {
-    console.log(props,"PROPS")
-   const gettingFavs = {
-    photoId: props.photoId,
-    photoUrl: props.photoUrl 
-    }
-    console.log(gettingFavs, "gettingfavorites")
+  console.log(props)
+ const gettingFavorites = {
+   photoId: props.favorites.id,
+   photoUrl: props.url
+ }
+ console.log(gettingFavorites,"gettingPhotos")
 
   return (
-  <li className="fav-wrap">
-    <img src={props.favorite}alt=""/>
-   
+  <li className="gif-wrap">
+    <img src={props.url}alt=""/>
     </li>
 
 );
 }
-
 export default Favorite;

@@ -21,7 +21,7 @@ export default class Favorites extends Component {
       componentDidMount() {
         axios.get('http://localhost:5002/favorites')
           .then (response => {
-            console.log(response,"RESONSE")
+            console.log(response,"RESPONSE")
             this.setState({
               favorites: response.data
             });

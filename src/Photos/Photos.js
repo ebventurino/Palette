@@ -15,7 +15,7 @@ export default class Photos extends Component {
     };
   }
   
-
+// main api
   componentDidMount() {
     axios.get('https://api.unsplash.com/photos/?client_id=34b1a6b2a6c2a9b3f6af5e39a76c9943bdbbaf10bd455336f70e98ca31250475&per_page=9')
       .then(response => {
@@ -28,7 +28,7 @@ export default class Photos extends Component {
       });
   }
 
-
+// More Photos API
   getMorePhotos = () => {
     console.log(this.state.counter)
     this.setState({ counter: this.state.counter+1})
@@ -37,7 +37,7 @@ export default class Photos extends Component {
       .then(photos => this.setState({ photos: photos }))
     }
 
-// header
+// header and posting state?
   render() {
     console.log(this.state.photos)
     return (
