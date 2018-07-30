@@ -1,7 +1,7 @@
 import React from 'react';
 import Favorite from './Favorite'
 import APIManager from '../APIManager'
-
+//setting props
 const SingleFavorite = props => {
 
     const results = props.data;

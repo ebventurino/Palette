@@ -1,9 +1,10 @@
 import React from 'react';
 import Photo from './Photo';
-
+//setting props to photolist
 const PhotoList = props => { 
 
   const results = props.data;
+  // looping through results of props
   let photos = results.map(photo => 
      <Photo url={photo.urls.small}/>
   );

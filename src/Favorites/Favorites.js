@@ -15,7 +15,7 @@ export default class Favorites extends Component {
   
       };
     }
-  
+  // calling favorites which are in JSON, then update state
     componentDidMount() {
       axios.get('http://localhost:5002/favorites')
         .then (response => {
@@ -29,7 +29,7 @@ export default class Favorites extends Component {
         });
     }
   
-
+//render main header pass props into state
     render() {
       console.log(this.state.favorites)
       return (
