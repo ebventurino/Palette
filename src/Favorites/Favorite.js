@@ -15,6 +15,7 @@ const Favorite = props => {
       <li className="gif-wrap">
         <img src={props.url} alt="" />
       </li>
+      <div className="comments">
       <form>
         <label>
           Comment:
@@ -22,6 +23,7 @@ const Favorite = props => {
         </label>
         <input type="submit" value="Submit" />
       </form>
+      </div>
 
     </React-fragment>
   )
