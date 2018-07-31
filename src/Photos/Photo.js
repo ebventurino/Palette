@@ -10,6 +10,7 @@ const Photo = props => {
  console.log(gettingPhotos,"gettingPhotos")
 
   return (
+    <div className="favoriteImages">
   <li className="gif-wrap">
     <img src={props.url}alt=""/>
     <label>
@@ -21,7 +22,7 @@ const Photo = props => {
           />
    </label>
     </li>
-
+</div>
 );
 }
 export default Photo;

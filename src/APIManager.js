@@ -34,9 +34,28 @@ const ApiManager = Object.create({}, {
                 .then(e => e.json())
                 .then(favorites => this.setState({ favorites: favorites }))
         }
-    }
+    },
+    getAllComments: {
+        value: () => {
+            return fetch("http://localhost:5002/comments")
+                .then(e => e.json())
+        }
+    },
     
-    
+    addComment: {
+        value: (newObject) => {
+            return fetch("http://localhost:5002/comments", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newObject)
+            })
+                // When POST is finished, retrieve the new list of tasks
+                .then(() => {
+                    return fetch("http://localhost:5002/comments")
+                })
+                .then(a => a.json())
+        }
+    },
     
 })
 
