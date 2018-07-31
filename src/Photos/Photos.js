@@ -43,11 +43,11 @@ export default class Photos extends Component {
     return (
       <div>
         <div className="main-header">
+      <button onClick={this.getMorePhotos}>More Images</button>
           <div className="inner">
             <img src={logo} className="App-logo" alt="logo" />
 
           </div>
-          <button onClick={this.getMorePhotos}>More Images</button>
         </div>
         <div className="main-content">
           <SinglePhoto data={this.state.photos} />

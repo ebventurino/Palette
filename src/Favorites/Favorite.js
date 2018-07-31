@@ -4,17 +4,26 @@ import React from 'react';
 const Favorite = props => {
   console.log(props)
   // favorites link to favorites.id and url
- const gettingFavorites = {
-   photoId: props.favorites.id,
-   photoUrl: props.url
- }
- console.log(gettingFavorites,"gettingPhotos")
+  const gettingFavorites = {
+    photoId: props.favorites.id,
+    photoUrl: props.url
+  }
+  console.log(gettingFavorites, "gettingPhotos")
 
   return (
-  <li className="fav-wrap">
-    <img src={props.url}alt=""/>
-    </li>
+    <React-fragment>
+      <li className="gif-wrap">
+        <img src={props.url} alt="" />
+      </li>
+      <form>
+        <label>
+          Comment:
+    <input type="Comment" name="Comment" />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
 
-);
+    </React-fragment>
+  )
 }
 export default Favorite;

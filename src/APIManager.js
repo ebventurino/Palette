@@ -1,10 +1,10 @@
 //login
-getUserByUserName: {
-    value: (userName) => {
-        return fetch(`http://localhost:5002/users?userName=${userName}`)
-            .then(e => e.json())
-    }
-}
+// getUserByUserName: {
+//     value: (userName) => {
+//         return fetch(`http://localhost:5002/users?userName=${userName}`)
+//             .then(e => e.json())
+//     }
+// }
 
 const ApiManager = Object.create({}, {
 

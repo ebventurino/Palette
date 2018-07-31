@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ApiManager from '../APIManager'
+
 import axios from 'axios'
 import logo from '../PaletteLogo.jpg'
 import SingleFavorite from './SingleFavorite'
@@ -33,20 +33,20 @@ export default class Favorites extends Component {
     render() {
       console.log(this.state.favorites)
       return (
-        <div>
-          <div className="main-header">
-            <div className="inner">
-              <img src={logo} className="App-logo" alt="logo" />
+        // <div>
+        //   <div className="main-header">
+        //     <div className="inner">
+        //       <img src={logo} className="App-logo" alt="logo" />
   
-            </div>
-          </div>
+        //     </div>
+        //   </div>
           <div className="main-content">
             <SingleFavorite data={this.state.favorites} />
   
           </div>
-        </div>
+      //   </div>
   
-      );
+       );
   
     }
   
