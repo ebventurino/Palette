@@ -14,29 +14,19 @@ export default class Comments extends Component {
             .then(comments => this.setState({ comments: comments }))
     }
 
-    addComment(event) {
-        event.preventDefault()
-        const newObject = { name: this.state.comments, }
-        fetch("http://localhost:5002/comments", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(newObject)
-        })
-            .then(() => {
-                ApiManager.getAllComments()
-                    .then(comments => this.setState({ comments: comments }))
 
-
-            })
-    }
-
+addComment = (e) => {
+    e.preventDefault();
+    console.log(this.state.comments)
+    ApiManager.addComment
+}   
     render() {
         return (
             
             <div className="comments">
-                <form onSubmit={ApiManager.addComment}>
+                <form onSubmit={this.addComment}>
                     <label>
-                        Comment:
+                        Notes:
 <input type="text" name="Comment" />
                     </label>
                     <input type="submit" value="Submit" />

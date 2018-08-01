@@ -62,12 +62,18 @@
       "photoId": "TtcCH0MTjL8",
       "photoUrl": "https://images.unsplash.com/photo-1532988265-988baa1103d2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=8d2ce67ae0a02886bcc492b401dc813a",
       "id": "ugmnGkS"
+    },
+    {
+      "photoId": "lORAvMgkq6I",
+      "photoUrl": "https://images.unsplash.com/photo-1533143905186-1d7b05a6cd53?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=77340fa77f5de3d8373d50f879614adf",
+      "id": "dgjSynL"
     }
   ],
   "comments": [
     {
       "id": "1",
-      "message": "I like this"
+      "message": "I like this",
+      "favoriteId": "ugmnGkS"
     }
   ]
 }
