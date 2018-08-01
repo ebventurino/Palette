@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ApiManager from '../APIManager'
+
 
 
 
@@ -21,7 +23,7 @@ export default class Comments extends Component {
             body: JSON.stringify(newObject)
         })
             .then(() => {
-                Database.getAllComments()
+                ApiManager.getAllComments()
                     .then(comments => this.setState({ comments: comments }))
 
 
@@ -30,8 +32,9 @@ export default class Comments extends Component {
 
     render() {
         return (
+            
             <div className="comments">
-                <form onSubmit={this.addComment.bind(this)}>
+                <form onSubmit={ApiManager.addComment}>
                     <label>
                         Comment:
 <input type="text" name="Comment" />
@@ -42,4 +45,3 @@ export default class Comments extends Component {
         )
     }
 }
-}    
