@@ -21,15 +21,16 @@ const SingleFavorite = props => {
             favoriteId={comments.favoriteId} />
 
 
-
-    );
+    ); console.log(allComments, "get all comments")
     return (
         <React-fragment>
-            <ul className="photo-list">
+            <div className="photo-list">
                 {allFavorites}
-                {allComments}
-            </ul>
 
+            </div>
+            < div className="comment-list">
+                {allComments}
+            </div>
 
         </React-fragment>
 
