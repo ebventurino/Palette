@@ -6,6 +6,7 @@ import Comments from './Comments'
 const CommentList = props => {
 
     const results = props.data;
+    console.log(props.data,"props.data")
 
 
     let allComments = results.map(comments =>

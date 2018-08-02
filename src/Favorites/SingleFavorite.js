@@ -1,7 +1,6 @@
 import React from 'react';
 import Favorite from './Favorite'
 import APIManager from '../APIManager'
-import Comments from './Comments'
 //setting props
 const SingleFavorite = props => {
 

@@ -51,10 +51,8 @@ const ApiManager = Object.create({}, {
                 body: JSON.stringify(newObject)
             })
                 // When POST is finished, retrieve the new list of tasks
-                .then(() => {
-                    this.getAllComments()
-                     .then(comments => this.setState({ comments: comments }))
-                })
+                .then(e => e.json()) 
+                    
         }
     },
     updateOneComment: {
