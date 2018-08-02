@@ -13,6 +13,10 @@ export default class Example extends React.Component {
             <NavLink href="/Favorites">Favorites</NavLink>
           </NavItem>
         </Nav>
+        <NavItem>
+        <NavLink href="/Comments">Notes</NavLink>
+          </NavItem>
+        
                 <Nav vertical>
         </Nav>
       </div>

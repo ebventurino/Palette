@@ -4,6 +4,7 @@ import Login from "./Login"
 import Photos from "./Photos/Photos"
 import App from "./App"
 import Favorites from "./Favorites/Favorites"
+import Comments from "./Favorites/Comments"
 
 
 export default class ApplicationViews extends Component {
@@ -21,8 +22,9 @@ export default class ApplicationViews extends Component {
                         return <Login{...props}/>
                     }
                 }} />
-                <Route path="/App" component={App} />
-                <Route path="Favorites/Favorites" component={Favorites} />
+                <Route exact path="/Photos" component={Photos} />
+                <Route exact path="/Favorites" component={Favorites} />
+                <Route exact path="/Comments" component={Comments}/>
             
             </React.Fragment>
         )

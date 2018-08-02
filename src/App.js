@@ -15,8 +15,8 @@ class App extends Component {
       <React.Fragment>
         <NavBar />
         <ApplicationViews />
-        <Favorites />
-        <Comments />
+        {/* <Favorites />
+        <Comments /> */}
       </React.Fragment>
 
     );

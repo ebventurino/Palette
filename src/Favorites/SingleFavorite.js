@@ -15,22 +15,13 @@ const SingleFavorite = props => {
     ); console.log(allFavorites, "GET ALL FAVORITES")
 
 
-    let allComments = results.map(comments =>
-        <Comments key={comments.id}
-            message={comments.message}
-            favoriteId={comments.favoriteId} />
-
-
-    ); console.log(allComments, "get all comments")
     return (
         <React-fragment>
             <div className="photo-list">
                 {allFavorites}
 
             </div>
-            < div className="comment-list">
-                {allComments}
-            </div>
+         
 
         </React-fragment>
 
