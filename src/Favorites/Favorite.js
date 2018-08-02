@@ -13,7 +13,7 @@ const Favorite = props => {
 return (
   <React-fragment>
     
-    <li className="gif-wrap">
+    <li className="photo-wrap">
       <img src={props.url} alt="" />
     </li>
 

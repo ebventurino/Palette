@@ -11,7 +11,7 @@ const Photo = props => {
 
   return (
     <div className="favoriteImages">
-  <li className="gif-wrap">
+  <li className="photo-wrap">
     <img src={props.url}alt=""/>
     <label>
     Favorite:

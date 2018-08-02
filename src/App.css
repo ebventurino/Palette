@@ -198,12 +198,11 @@ button {
   }
 }
 
-@media (min-width: 100px) { 
+img (min-width: 100px) { 
   .photo-list li:nth-of-type(3n+1) {
     clear: left;
   }
 }
-
 img {
   border: 5px solid black;
     float: left;
@@ -241,6 +240,6 @@ transform: scale(2,2);
 
 }
 
-
-
-    
+.comments {
+  text-align: center
+}

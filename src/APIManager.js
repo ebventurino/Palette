@@ -36,12 +36,13 @@ const ApiManager = Object.create({}, {
         }
     },
     getAllComments: {
-        value: () => {
-            return fetch("http://localhost:5002/comments")
+        value: (userInput) => {
+            return fetch(`http://localhost:5002/comments`)
                 .then(e => e.json())
+
         }
     },
-    
+
     addComment: {
         value: (newObject) => {
             return fetch("http://localhost:5002/comments", {
@@ -51,13 +52,25 @@ const ApiManager = Object.create({}, {
             })
                 // When POST is finished, retrieve the new list of tasks
                 .then(() => {
-                    return fetch("http://localhost:5002/comments")
+                    this.getAllComments()
+                     .then(comments => this.setState({ comments: comments }))
                 })
-                .then(a => a.json())
         }
     },
-    
-    
+    updateOneComment: {
+        value: (message) => {
+            console.log(message)
+            return fetch(`http://localhost:5002/comments/${message}`, {
+                method: "PATCH",
+                body: JSON.stringify({
+                    completed: true
+                }),
+                headers: { "Content-Type": "application/json" },
+            })
+                .then(e => e.json())
+        }
+    },
+
 })
 
 
