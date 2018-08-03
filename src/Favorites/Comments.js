@@ -11,8 +11,17 @@ export default class Comments extends Component {
         comments: [],
         commentsToEdit: {},
     }
+    componentDidMount() {
+        axios
+            .get('http://localhost:5002/comments')
+            .then(({ data }) => {
+                console.log(data, "DATA");
+                this.setState({ comments: data })
 
 
+            })
+
+    }
     addComment = (e) => {
         e.preventDefault();
         const newObject = {
@@ -40,7 +49,6 @@ export default class Comments extends Component {
         // e.preventDefault();
         const stateToChange = {}
         stateToChange[e.target.id] = e.target.value
-        console.log("stateToChange", stateToChange)
         this.setState(stateToChange)
 
     }
@@ -56,15 +64,8 @@ export default class Comments extends Component {
         stateToChange[event.target.id] = event.target.value
         this.setState(stateToChange)
     }
-    componentDidMount(){
-        axios
-          .get('http://localhost:5002/comments')
-          .then(({ data })=> {
-            console.log(data,"DATA");
-            
-          })
-      
-    }
+
+
 
     render() {
         return (
@@ -80,7 +81,11 @@ export default class Comments extends Component {
                     <button type="submit" value="Submit" className="submit" onClick={this.commentFormInput}>Add Comment</button>
                 </form>
 
-
+                {
+                    this.state.comments.map(message =>
+                        <CommentList key={message.id} message={message} />
+                    )
+                }
             </div>
         )
     }
