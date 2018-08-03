@@ -12,7 +12,8 @@ const CommentList = props => {
     let allComments = results.map(comments =>
         <Comments key={comments.id}
             message={comments.message}
-            favoriteId={comments.favoriteId} />
+            favoriteId={comments.favoriteId} 
+            UserId = {JSON.parse(localStorage.getItem('credentials')).id}/>
 
 
     ); console.log(allComments, "get all comments")

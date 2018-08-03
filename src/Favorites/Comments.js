@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CommentList from './CommentList'
 import ApiManager from '../APIManager'
+import axios from 'axios'
 
 
 
@@ -11,17 +12,13 @@ export default class Comments extends Component {
         commentsToEdit: {},
     }
 
-    componentDidMount() {
-        ApiManager.getAllComments()
-            .then(comments => this.setState({ comments: comments }))
-    }
 
     addComment = (e) => {
         e.preventDefault();
         const newObject = {
             id: this.state.id,
             message: this.state.message,
-            UserId: this.props.UserId
+            UserId: JSON.parse(localStorage.getItem('credentials')).id
         }
         ApiManager.addComment(newObject)
             .then(Response => {
@@ -58,6 +55,15 @@ export default class Comments extends Component {
         const stateToChange = {}
         stateToChange[event.target.id] = event.target.value
         this.setState(stateToChange)
+    }
+    componentDidMount(){
+        axios
+          .get('http://localhost:5002/comments')
+          .then(({ data })=> {
+            console.log(data,"DATA");
+            
+          })
+      
     }
 
     render() {

@@ -4,13 +4,13 @@ import React from 'react';
 const Favorite = props => {
   // favorites link to favorites.id and url
   const gettingFavorites = {
-    photoId: props.favorites.id,
+    photoId: props.id,
     photoUrl: props.url,
-    id: JSON.parse(localStorage.getItem('id'))
+    UserId: JSON.parse(localStorage.getItem('credentials')).id
   }
 
-
-
+  console.log(JSON.parse(localStorage.getItem('credentials')).id)
+ 
 return (
   <React-fragment>
     

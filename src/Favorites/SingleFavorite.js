@@ -10,7 +10,9 @@ const SingleFavorite = props => {
         <Favorite url={favorites.photoUrl}
             key={favorites.id}
             getAllFavorites={APIManager.getAllFavorites}
-            favorites={favorites} />
+            favorites={favorites}
+            UserId={JSON.parse(localStorage.getItem('credentials')).id}
+             />
     ); console.log(allFavorites, "GET ALL FAVORITES")
 
 

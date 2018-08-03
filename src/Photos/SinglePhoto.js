@@ -7,6 +7,8 @@ const SinglePhoto = props => {
   const results = props.data;
   //looping through the photos
   let photos = results.map(photo =>
+    
+
 
     <Photo url={photo.urls.regular}
 //setting key to photo.id
