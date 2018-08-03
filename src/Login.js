@@ -1,4 +1,4 @@
-
+import APIManager from './APIManager'
 import React, { Component } from "react"
 import logo from './PaletteLogo.jpg';
 
@@ -19,22 +19,36 @@ export default class Login extends Component {
     handleLogin = (e) => {
         e.preventDefault()
 
-        /*
-            For now, just store the email and password that
-            the customer enters into local storage.
-        */
-    
+        APIManager.getUserByEmail(this.state.email)
+        .then ((taco) => {
+            console.log(taco[0].id)
            localStorage.setItem(
                 "credentials",
                 JSON.stringify({
                     email: this.state.email,
                     password: this.state.password,
                     userName: this.state.userName,
+                    id: taco[0].id
                     
-                }
+                })
             )
-        )
+        })
     }
+            
+    // handleLogin = (e) => {
+    //     e.preventDefault()
+    //     APIManager.getUserByEmail(this.state.email)
+    //     .then ((taco) => {
+    //         console.log(taco[0].id)
+    //         localStorage.setItem(
+    //             "credentials",
+    //             JSON.stringify({
+    //                 email: this.state.email,
+    //                 password: this.state.password,
+    //                 userName: this.state.userName,
+    //                 currentUserId: taco[0].id
+            
+            
             
         //render the form
     render() {
@@ -62,8 +76,7 @@ export default class Login extends Component {
                     id="password"
                     placeholder="Password"
                     required="" />
-               <button type="submit"onClick={() => window.location.reload()
-                }>
+               <button type="submit">
                     Sign in
                 </button>
             </form>

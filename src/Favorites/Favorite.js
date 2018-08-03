@@ -5,7 +5,8 @@ const Favorite = props => {
   // favorites link to favorites.id and url
   const gettingFavorites = {
     photoId: props.favorites.id,
-    photoUrl: props.url
+    photoUrl: props.url,
+    id: JSON.parse(localStorage.getItem('id'))
   }
 
 
