@@ -9,7 +9,9 @@ import axios from 'axios'
 export default class Comments extends Component {
     state = {
         comments: [],
-        commentsToEdit: {},
+        commentsToEdit: {...this.props.comments},
+        viewForm: false,
+    
     }
     componentDidMount() {
         axios
@@ -22,6 +24,17 @@ export default class Comments extends Component {
             })
 
     }
+
+    editMessage = (id) => {
+        // console.log("mealId", mealId)
+        fetch(`http://localhost:5002/message/${id}`)
+            // Once the new array of meals is retrieved, set the state
+            .then(a => a.json())
+            .then(comments => {
+                this.setState({CommentsToEdit: comments, viewForm: true})
+            })
+    }
+
     addComment = (e) => {
         e.preventDefault();
         const newObject = {
@@ -33,9 +46,8 @@ export default class Comments extends Component {
             .then(Response => {
                 ApiManager.getAllComments()
             })
-            .then(comments => {
-                this.setState({ comments: comments })
-            })
+           
+            
 
     }
 
@@ -73,18 +85,19 @@ export default class Comments extends Component {
             <div className="comments">
                 <form onSubmit={this.addComment.bind(this)}>
                     <label>
-                        Notes:
-                        <input onChange={this.commentFormInput} type="text" name="Comment" id="message"
+                        <textarea onChange={this.commentFormInput} type="textarea" rows="5" cols="80" name="Comment" id="message"
                             placeholder="Notes"
-                            required="" autoFocus="" />
+                            required="" autoFocus=""  />
                     </label>
                     <button type="submit" value="Submit" className="submit" onClick={this.commentFormInput}>Add Comment</button>
-                </form>
+                    </form>
+                    <a href="#">Edit</a>
 
                 {
                     this.state.comments.map(message =>
                         <CommentList key={message.id} message={message} />
                     )
+                    
                 }
             </div>
         )

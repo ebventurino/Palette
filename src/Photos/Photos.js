@@ -39,7 +39,7 @@ export default class Photos extends Component {
       
   }
 
-  // header and posting state?
+  // header and posting via state
   render() {
     console.log(this.state.photos)
     return (

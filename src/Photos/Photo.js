@@ -1,6 +1,6 @@
 import React from 'react';
 
-//
+// passing props - setting photo id, photo url, and userid
 const Photo = props => {
   console.log(props)
  const gettingPhotos = {
@@ -10,6 +10,7 @@ const Photo = props => {
  }
  console.log(gettingPhotos,"gettingPhotos")
 
+ // passing props that is the photo.url. creating checkbox. 
   return (
     <div className="favoriteImages">
   <li className="photo-wrap">
