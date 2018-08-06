@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import ApiManager from '../APIManager'
 import axios from 'axios'
-import logo from '../PaletteLogo.jpg'
 import SingleFavorite from './SingleFavorite'
 
 export default class Favorites extends Component {

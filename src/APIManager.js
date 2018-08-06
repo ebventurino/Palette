@@ -71,7 +71,7 @@ const ApiManager = Object.create({}, {
         }
     },
 
-})
+
 
 deleteComment: {
     value: (itemId) => {
@@ -80,7 +80,7 @@ deleteComment: {
       })
     }
   }
-
+})
 
 export default ApiManager
 

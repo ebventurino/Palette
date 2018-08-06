@@ -37,7 +37,6 @@ export default class Comments extends Component {
     }
 
     addComment = (e) => {
-        e.preventDefault();
         const newObject = {
             id: this.state.id,
             message: this.state.message,
@@ -53,7 +52,6 @@ export default class Comments extends Component {
     }
 
     getAllComments = (e) => {
-        e.preventDefault();
         console.log(this.state.getAllComments)
         ApiManager.getAllComments()
             .then(comments => this.setState({ comments: comments }))
@@ -64,6 +62,9 @@ export default class Comments extends Component {
         const stateToChange = {}
         stateToChange[e.target.id] = e.target.value
         this.setState(stateToChange)
+        
+        ApiManager.getAllComments()
+        .then(comments => this.setState({ comments: comments }))
 
     }
     deleteComment = (commentId) => {
@@ -78,6 +79,7 @@ export default class Comments extends Component {
         return (
 
             <div className="comments">
+           
                 <form onSubmit={this.addComment.bind(this)}>
                     <label>
                         <textarea onChange={this.commentFormInput} type="textarea" rows="5" cols="80" name="Comment" id="message"
