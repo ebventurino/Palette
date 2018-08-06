@@ -9,8 +9,9 @@ import axios from 'axios'
 export default class Comments extends Component {
     state = {
         comments: [],
-        commentsToEdit: { ...this.props.comments },
+        commentsToEdit: {},
         viewForm: false,
+      
 
     }
     // main API
@@ -24,16 +25,7 @@ export default class Comments extends Component {
 
             })
 
-    }
-
-    editMessage = (id) => {
-        // console.log("mealId", mealId)
-        fetch(`http://localhost:5002/message/${id}`)
-            // Once the new array of meals is retrieved, set the state
-            .then(a => a.json())
-            .then(comments => {
-                this.setState({ CommentsToEdit: comments, viewForm: true })
-            })
+    
     }
 
     addComment = (e) => {
@@ -58,14 +50,18 @@ export default class Comments extends Component {
     }
     // 
     commentFormInput = (e) => {
-        //e.preventDefault();
+        // e.preventDefault();
         const stateToChange = {}
         stateToChange[e.target.id] = e.target.value
         this.setState(stateToChange)
 
         ApiManager.getAllComments()
-            .then(comments => this.setState({ comments: comments }))
-
+            .then(Comments => {
+                this.setState({ 
+                    comments: Comments
+                 })
+                })
+            
     }
     deleteComment = (commentId) => {
         ApiManager.deleteComment(commentId)
@@ -80,8 +76,33 @@ export default class Comments extends Component {
             });
 
     }
+    handleEdit = (event) => {
+        const eventList = this.state.commentsToEdit
+        event.preventDefault()
+        console.log(this.state.commentsToEdit,"comments")
+        ApiManager.handleEdit(eventList)
+            .then(CommentList => {
+                this.setState({
+                    tasks: CommentList
+                })
+            })
+    }
+//passing in comment ID
+    editComment = (commentId) => {
+        console.log("commentId","CommentID")
+        fetch(`http://localhost:5002/comments/${commentId}`)
+            // Once the new array of comments is received, set the state
+            .then(a => a.json())
+            .then(comments => {
+                this.setState({commentsToEdit: comments, viewForm: true})
+            })
+    }
 
-
+    handleFieldChange = (event) => {
+        const stateToChange = this.state.commentToEdit
+        stateToChange[event.target.id] = event.target.value
+        this.setState({ commentToEdit: stateToChange })
+    }
 
     render() {
 
@@ -106,7 +127,8 @@ export default class Comments extends Component {
                         <CommentList
                             key={message.id}
                             message={message}
-                            deleteComment={this.deleteComment} />
+                            deleteComment={this.deleteComment}
+                            editComment={this.state.commentToEdit} />
 
                     )
 

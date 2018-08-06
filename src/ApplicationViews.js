@@ -4,7 +4,7 @@ import Login from "./Login"
 import Photos from "./Photos/Photos"
 import App from "./App"
 import Favorites from "./Favorites/Favorites"
-import Comments from "./Favorites/Comments"
+import Comments from "./Comments/Comments"
 
 
 export default class ApplicationViews extends Component {

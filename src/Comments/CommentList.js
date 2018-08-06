@@ -21,7 +21,7 @@ export default props => {
                 2018-08-05T12:59-0500
             </Moment></h6>
                 {props.message.message}
-                <button>Edit</button>
+                <button onClick={() => props.editComment(props.message.id)}>Edit</button>
                 <button onClick={() => props.deleteComment(props.message.id)}>Delete</button>
                 
             </div>

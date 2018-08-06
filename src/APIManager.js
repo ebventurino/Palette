@@ -79,8 +79,33 @@ deleteComment: {
           method: "DELETE"
       })
     }
+  },
+
+  handleEdit: {
+    value: (commentToEdit) => {
+        return fetch(`http://localhost:5002/meals/${commentToEdit.id}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(commentToEdit)
+        })
+            .then(a => a.json())
+    }
+},
+
+  updateComment: {
+    value: (itemId, dataObject) => {
+      return fetch(`http://localhost:5002/comments/${itemId}`, {
+        method: "PUT",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dataObject)
+      });
+    }
   }
 })
+
+
 
 export default ApiManager
 
