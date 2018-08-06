@@ -10,7 +10,7 @@ const Photo = props => {
  }
  console.log(gettingPhotos,"gettingPhotos")
 
- // passing props that is the photo.url. creating checkbox. 
+ // passing props that is the photo.url. creating checkbox.
   return (
     <div className="favoriteImages">
   <li className="photo-wrap">

@@ -13,6 +13,7 @@ export default class Comments extends Component {
         viewForm: false,
     
     }
+    // main API
     componentDidMount() {
         axios
             .get('http://localhost:5002/comments')
@@ -57,25 +58,27 @@ export default class Comments extends Component {
         ApiManager.getAllComments()
             .then(comments => this.setState({ comments: comments }))
     }
+    // 
     commentFormInput = (e) => {
-        // e.preventDefault();
+        //e.preventDefault();
         const stateToChange = {}
         stateToChange[e.target.id] = e.target.value
         this.setState(stateToChange)
 
     }
-    completeComment = (passingIn) => {
-        console.log(ApiManager.updateOneComment)
-        ApiManager.updateOneComment(passingIn)
-            .then(comments => this.setState({ comments: comments }))
+     deleteComment = id => {
+        // Delete the specified animal from the API
+        ApiManager.deleteComment("comments", id)
+          .then(() => {
+            return ApiManager.getAll("comments")
+          })      
+          .then(animalList => {
+            this.setState({
+              comments: Comments
+            });
+          });
+      };
 
-    }
-
-    messagesFormInput = (event) => {
-        const stateToChange = {}
-        stateToChange[event.target.id] = event.target.value
-        this.setState(stateToChange)
-    }
 
 
 
@@ -90,8 +93,9 @@ export default class Comments extends Component {
                             required="" autoFocus=""  />
                     </label>
                     <button type="submit" value="Submit" className="submit" onClick={this.commentFormInput}>Add Comment</button>
+                    
                     </form>
-                    <a href="#">Edit</a>
+                   
 
                 {
                     this.state.comments.map(message =>

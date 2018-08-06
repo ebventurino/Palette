@@ -31,18 +31,13 @@ export default class Favorites extends Component {
         });
     }
   
-  
-//render main header pass props into state
+    
+
+//render main header. rendering the state
     render() {
       console.log(this.state.favorites)
       return (
-        // <div>
-        //   <div className="main-header">
-        //     <div className="inner">
-        //       <img src={logo} className="App-logo" alt="logo" />
-  
-        //     </div>
-        //   </div>
+    
           <div className="main-content">
             <SingleFavorite data={this.state.favorites} />
             

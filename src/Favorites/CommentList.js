@@ -3,26 +3,18 @@ import Favorite from './Favorite'
 import APIManager from '../APIManager'
 import Comments from './Comments'
 //setting props
-const CommentList = props => {
-
-    const results = props;
-    console.log(results,"props")
-
-
-    // let allComments = results.message.map(comments =>
-    //     <Comments key={comments.id}
-    //         message={comments.message}
-    //         favoriteId={comments.favoriteId} 
-    //         UserId = {JSON.parse(localStorage.getItem('credentials')).id}/>
-        
-
-    // ); 
+export default props => {
     return (
+    
+   
+   
         <React-fragment>
 
 
             < div className="comment-list">
-                {results.message.message}
+                {props.message.message}
+                <button>Edit</button>
+                <button  onClick={() => Comments.deleteComment(APIManager.message.id)}>Delete</button>
             </div>
 
         </React-fragment>
@@ -30,5 +22,3 @@ const CommentList = props => {
 
     );
 }
-
-export default CommentList;

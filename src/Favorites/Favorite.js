@@ -10,13 +10,14 @@ const Favorite = props => {
   }
 
   console.log(JSON.parse(localStorage.getItem('credentials')).id)
- 
+ //rendering photo.url via props
 return (
   <React-fragment>
     
     <li className="photo-wrap">
       <img src={props.url} alt="" />
-    </li>
+
+   </li>
 
   </React-fragment>
 )

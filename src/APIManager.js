@@ -73,6 +73,21 @@ const ApiManager = Object.create({}, {
 
 })
 
+deleteComment: {
+    value: (Commentid) => {
+        // Delete the specified meal
+        return fetch(`http://localhost:5002/comments/${Commentid}`, {
+            method: "DELETE"
+        })
+            // When DELETE is finished, retrieve the new list of meals
+            .then(() => {
+                // Remember you HAVE TO return this fetch to the subsequenet `then()`
+                return fetch("http://localhost:5002/comments")
+            })
+            // Once the new array of meals is retrieved, set the state
+            .then(a => a.json())
+    }
+}
 
 
 export default ApiManager
