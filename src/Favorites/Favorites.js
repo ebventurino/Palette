@@ -39,10 +39,14 @@ export default class Favorites extends Component {
       return (
     
           <div className="main-content">
+          <h1>Favorites</h1>
             <SingleFavorite data={this.state.favorites} />
+            
+            
             
   
           </div>
+          
       //   </div>
   
        );

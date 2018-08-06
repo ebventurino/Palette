@@ -66,18 +66,10 @@ export default class Comments extends Component {
         this.setState(stateToChange)
 
     }
-     deleteComment = id => {
-        // Delete the specified animal from the API
-        ApiManager.deleteComment("comments", id)
-          .then(() => {
-            return ApiManager.getAll("comments")
-          })      
-          .then(animalList => {
-            this.setState({
-              comments: Comments
-            });
-          });
-      };
+    deleteComment = (commentId) => {
+        ApiManager.deleteComment(commentId) 
+            .then(deletedComment => this.setState({ comments: deletedComment }))
+    }
 
 
 
@@ -99,7 +91,10 @@ export default class Comments extends Component {
 
                 {
                     this.state.comments.map(message =>
-                        <CommentList key={message.id} message={message} />
+                        <CommentList
+                         key={message.id}
+                         message={message} 
+                         deleteComment={this.deleteComment}/>
                     )
                     
                 }

@@ -47,7 +47,8 @@ export default class Photos extends Component {
         <div className="main-header">
           <button onClick={this.getMorePhotos}>More Images</button>
           <div className="inner">
-            <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo" alt="logo" />
+
 
           </div>
         </div>
