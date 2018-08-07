@@ -6,7 +6,7 @@ import Comments from './Comments'
 export default props => {
    
  
-    console.log(props.message.id,"props")
+    console.log(props.message,"message.id")
     console.log(props.editComment, "props")
 
     return (

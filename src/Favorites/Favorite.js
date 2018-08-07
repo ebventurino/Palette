@@ -13,10 +13,9 @@ const Favorite = props => {
  //rendering photo.url via props
 return (
   <React-fragment>
-    
     <li className="photo-wrap">
       <img src={props.url} alt="" />
-
+      <button className="deleteButton" >delete</button>
    </li>
 
   </React-fragment>

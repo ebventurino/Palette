@@ -81,28 +81,19 @@ deleteComment: {
     }
   },
 
-  handleEdit: {
-    value: (commentToEdit) => {
-        return fetch(`http://localhost:5002/meals/${commentToEdit.id}`, {
+  updateComment: {
+    value: (itemId) => {
+        return fetch(`http://localhost:5002/comments/${itemId}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(commentToEdit)
+            body: JSON.stringify(itemId)
         })
-            .then(a => a.json())
+        
+            .then(e => e.json())
     }
 },
 
-  updateComment: {
-    value: (itemId, dataObject) => {
-      return fetch(`http://localhost:5002/comments/${itemId}`, {
-        method: "PUT",
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(dataObject)
-      });
-    }
-  }
+  
 })
 
 

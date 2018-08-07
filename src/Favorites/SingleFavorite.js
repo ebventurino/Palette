@@ -20,6 +20,7 @@ const SingleFavorite = props => {
         <React-fragment>
             <div className="photo-list">
                 {allFavorites}
+                
 
             </div>
          

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CommentList from './CommentList'
 import ApiManager from '../APIManager'
 import axios from 'axios'
+import { Dropdown, DropdownMenu, DropdownToggle } from 'reactstrap';
 
 
 
@@ -9,11 +10,12 @@ import axios from 'axios'
 export default class Comments extends Component {
     state = {
         comments: [],
-        commentsToEdit: { ...this.props.comments },
+        commentsToEdit: { },
         viewForm: false,
 
 
     }
+    
     // main API
     componentDidMount() {
         axios
@@ -76,22 +78,22 @@ export default class Comments extends Component {
             });
 
     }
-// edit button
-    handleFieldChange = evt => {
-        const stateToChange = {};
-        stateToChange[evt.target.id] = evt.target.value;
-        this.setState(stateToChange);
-      };
+
+    editComment = (commentId) => {
+        ApiManager.updateComment(commentId)
+            .then(() => {
+                return ApiManager.getAllComments()
+            })
+            .then(Comments => {
+                this.setState({
+                    comments: Comments
+                    
+                });
+            });
+
+    }
     
-      handleUpdate = e => {
-        e.preventDefault();
-    
-        const updatedComment = {name: this.state.comment}
-        ApiManager.updateItem("comment", this.props.comment.id, updatedComment)
-        .then(() => {
-          this.props.history.push("/comments");
-        })
-      };
+
 
     render() {
 
@@ -117,11 +119,12 @@ export default class Comments extends Component {
                             key={message.id}
                             message={message}
                             deleteComment={this.deleteComment}
-                            editComment={this.state.commentsToEdit} />
+                            editComment={this.editComment} />
 
                     )
 
                 }
+                
                 <form onSubmit={this.handleUpdate}>
                     <h1 className="h3 mb-3 font-weight-normal">Edit Comment</h1>
                     <textarea
@@ -132,6 +135,7 @@ export default class Comments extends Component {
                         cols="80"
                         id="editComments"
                         required=""
+                        value= {this.state.comments}
                     />
                     <button type="submit">Update</button>
                 </form>
