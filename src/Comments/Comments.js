@@ -9,9 +9,9 @@ import axios from 'axios'
 export default class Comments extends Component {
     state = {
         comments: [],
-        commentsToEdit: {},
+        commentsToEdit: { ...this.props.comments },
         viewForm: false,
-      
+
 
     }
     // main API
@@ -25,7 +25,7 @@ export default class Comments extends Component {
 
             })
 
-    
+
     }
 
     addComment = (e) => {
@@ -57,11 +57,11 @@ export default class Comments extends Component {
 
         ApiManager.getAllComments()
             .then(Comments => {
-                this.setState({ 
+                this.setState({
                     comments: Comments
-                 })
                 })
-            
+            })
+
     }
     deleteComment = (commentId) => {
         ApiManager.deleteComment(commentId)
@@ -76,33 +76,8 @@ export default class Comments extends Component {
             });
 
     }
-    handleEdit = (event) => {
-        const eventList = this.state.commentsToEdit
-        event.preventDefault()
-        console.log(this.state.commentsToEdit,"comments")
-        ApiManager.handleEdit(eventList)
-            .then(CommentList => {
-                this.setState({
-                    tasks: CommentList
-                })
-            })
-    }
-//passing in comment ID
-    editComment = (commentId) => {
-        console.log("commentId","CommentID")
-        fetch(`http://localhost:5002/comments/${commentId}`)
-            // Once the new array of comments is received, set the state
-            .then(a => a.json())
-            .then(comments => {
-                this.setState({commentsToEdit: comments, viewForm: true})
-            })
-    }
 
-    handleFieldChange = (event) => {
-        const stateToChange = this.state.commentToEdit
-        stateToChange[event.target.id] = event.target.value
-        this.setState({ commentToEdit: stateToChange })
-    }
+
 
     render() {
 
@@ -120,7 +95,7 @@ export default class Comments extends Component {
 
                 </form>
 
-
+                
                 {
 
                     this.state.comments.map(message =>
@@ -128,11 +103,26 @@ export default class Comments extends Component {
                             key={message.id}
                             message={message}
                             deleteComment={this.deleteComment}
-                            editComment={this.state.commentToEdit} />
+                            editComment={this.state.commentsToEdit} />
 
                     )
 
                 }
+                <form onSubmit={this.handleUpdate}>
+                    <h1 className="h3 mb-3 font-weight-normal">Edit Comment</h1>
+
+                    <label htmlFor="inputText">Edit Comment</label>
+                    <textarea
+                        // value={this.state.comments}
+                        // onChange={this.handleFieldChange}
+                        type="textarea"
+                        rows="5"
+                        cols="80"
+                        id="editComments"
+                        required=""
+                    />
+                    <button type="submit">Update</button>
+                </form>
             </div>
         )
     }

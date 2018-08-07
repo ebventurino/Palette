@@ -1,11 +1,13 @@
 import React from 'react';
 import Moment from 'react-moment';
+import Comments from './Comments'
 
 //setting props
 export default props => {
-    console.log(props.message.id, )
+   
  
-    
+    console.log(props.message.id,"props")
+    console.log(props.editComment, "props")
 
     return (
     
@@ -21,7 +23,9 @@ export default props => {
                 2018-08-05T12:59-0500
             </Moment></h6>
                 {props.message.message}
+                
                 <button onClick={() => props.editComment(props.message.id)}>Edit</button>
+                
                 <button onClick={() => props.deleteComment(props.message.id)}>Delete</button>
                 
             </div>
