@@ -1,4 +1,5 @@
 import React from 'react';
+import ApiManager from'../APIManager'
 
 // adding props, labeled as Favorite
 const Favorite = props => {
@@ -10,6 +11,22 @@ const Favorite = props => {
   }
 
   console.log(JSON.parse(localStorage.getItem('credentials')).id)
+
+
+  const deletePhoto = (id) => {
+    ApiManager.deletePhoto(id)
+        .then(() => {
+            return ApiManager.getAllFavorites()
+        })
+        .then(favorites => {
+            this.setState({
+                favorites: favorites
+            });
+        });
+
+}
+
+
  //rendering photo.url via props
 return (
   <React-fragment>

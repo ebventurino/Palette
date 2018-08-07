@@ -81,6 +81,14 @@ deleteComment: {
     }
   },
 
+  deletePhoto: {
+    value: (itemId) => {
+      return fetch(`http://localhost:5002/comments/${itemId}`, {
+          method: "DELETE"
+      })
+    }
+  },
+
   updateComment: {
     value: (itemId) => {
         return fetch(`http://localhost:5002/comments/${itemId}`, {
