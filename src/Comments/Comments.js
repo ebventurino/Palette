@@ -76,8 +76,22 @@ export default class Comments extends Component {
             });
 
     }
-
-
+// edit button
+    handleFieldChange = evt => {
+        const stateToChange = {};
+        stateToChange[evt.target.id] = evt.target.value;
+        this.setState(stateToChange);
+      };
+    
+      handleUpdate = e => {
+        e.preventDefault();
+    
+        const updatedComment = {name: this.state.comment}
+        ApiManager.updateItem("comment", this.props.comment.id, updatedComment)
+        .then(() => {
+          this.props.history.push("/comments");
+        })
+      };
 
     render() {
 
@@ -110,8 +124,6 @@ export default class Comments extends Component {
                 }
                 <form onSubmit={this.handleUpdate}>
                     <h1 className="h3 mb-3 font-weight-normal">Edit Comment</h1>
-
-                    <label htmlFor="inputText">Edit Comment</label>
                     <textarea
                         // value={this.state.comments}
                         // onChange={this.handleFieldChange}
