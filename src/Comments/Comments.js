@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import CommentList from './CommentList'
 import ApiManager from '../APIManager'
 import axios from 'axios'
-import { Dropdown, DropdownMenu, DropdownToggle } from 'reactstrap';
 
 
 
@@ -78,19 +77,29 @@ export default class Comments extends Component {
             });
 
     }
-
-    editComment = (commentId) => {
-        ApiManager.updateComment(commentId)
-            .then(() => {
-                return ApiManager.getAllComments()
+    handleEdit = (event) => {
+        const eventList = this.state.commentsToEdit
+        event.preventDefault()
+        console.log(this.state.commentsToEdit,"comments")
+        ApiManager.handleEdit(eventList)
+            .then(TaskList => {
+                this.setState({
+                    tasks: TaskList
+                })
             })
+    }
+    editComment = (taskId) => {
+     // Delete the specified animal from the API
+        fetch(`http://localhost:5002/comments/${taskId}`)
+
+            // Once the new array is retrieved, set the state
+            .then(a => a.json())
             .then(Comments => {
+                console.log(Comments, "tasklist")
                 this.setState({
                     comments: Comments
-                    
-                });
-            });
-
+                })
+            })
     }
     
 

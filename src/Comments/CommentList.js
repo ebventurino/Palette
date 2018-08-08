@@ -1,14 +1,19 @@
 import React from 'react';
 import Moment from 'react-moment';
 import Comments from './Comments'
+import ApiManager from '../APIManager'
 
 //setting props
 export default props => {
    
  
-    console.log(props.message,"message.id")
-    console.log(props.editComment, "props")
+    console.log(props.message.id,"message.id")
+   
 
+
+       
+
+    console.log(props.editComment, "edit comment")
     return (
     
    

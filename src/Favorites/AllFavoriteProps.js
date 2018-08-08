@@ -1,22 +1,22 @@
 import React from 'react';
 import Favorite from './Favorite'
-import APIManager from '../APIManager'
+import ApiManager from '../APIManager'
+import Favorites from './Favorites'
 //setting props
-const SingleFavorite = props => {
-
+const AllFavoriteProps = props => {
     const results = props.data;
     let allFavorites = results.map(favorites =>
 
         <Favorite url={favorites.photoUrl}
             key={favorites.id}
-            getAllFavorites={APIManager.getAllFavorites}
-            deleteFavorites={APIManager.deletePhoto}
+            getAllFavorites={ApiManager.getAllFavorites}
+            deleteFavorites= {ApiManager.deletePhoto}
             favorites={favorites}
             id={favorites.id}
             UserId={JSON.parse(localStorage.getItem('credentials')).id}
              />
              
-    ); console.log(allFavorites, "GET ALL FAVORITES")
+    ); console.log(allFavorites, "props")
 
 
     return (
@@ -34,5 +34,5 @@ const SingleFavorite = props => {
     );
 }
 
-export default SingleFavorite;
+export default AllFavoriteProps;
 

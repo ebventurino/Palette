@@ -85,9 +85,12 @@ deleteComment: {
     value: (itemId) => {
       return fetch(`http://localhost:5002/favorites/${itemId}`, {
           method: "DELETE"
-      })
-    }
-  },
+        }).then(() => { return fetch("http://localhost:5002/favorites/") })
+          
+      }
+      
+    },
+  
 
   updateComment: {
     value: (itemId) => {
@@ -97,7 +100,7 @@ deleteComment: {
             body: JSON.stringify(itemId)
         })
         
-            .then(e => e.json())
+            // .then(e => e.json())
     }
 },
 

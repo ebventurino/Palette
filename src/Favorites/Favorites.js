@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import SingleFavorite from './SingleFavorite'
+import AllFavoriteProps from './AllFavoriteProps'
 import ApiManager from '../APIManager'
+import Favorite from './Favorite'
 
 export default class Favorites extends Component {
     
@@ -30,7 +31,23 @@ export default class Favorites extends Component {
         });
     }
   
-    
+    deletePhoto = (photoId) => {
+      console.log("In the first .then")
+      ApiManager.deletePhoto(photoId)
+          .then(() => {
+              return ApiManager.getAllFavorites()
+              
+          }) 
+          .then(favorites => {
+              console.log(favorites, 'favorites')
+              console.log("In the second .then")
+              this.setState({
+                  favorites: favorites
+              });
+          });
+
+      
+    }  
      
 //render main header. rendering the state
     render() {
@@ -39,14 +56,15 @@ export default class Favorites extends Component {
     
           <div className="main-content">
           <h1>Favorites</h1>
-            <SingleFavorite data={this.state.favorites} />
+            <AllFavoriteProps data={this.state.favorites}
+             deleteFavorites= {this.deletePhoto}
+             />
             
             
             
   
           </div>
-          
-      //   </div>
+      
   
        );
   
