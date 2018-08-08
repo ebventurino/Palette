@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import SingleFavorite from './SingleFavorite'
+import ApiManager from '../APIManager'
 
 export default class Favorites extends Component {
     
@@ -30,7 +31,7 @@ export default class Favorites extends Component {
     }
   
     
-
+     
 //render main header. rendering the state
     render() {
       console.log(this.state.favorites)

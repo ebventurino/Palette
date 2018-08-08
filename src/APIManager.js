@@ -34,7 +34,7 @@ const ApiManager = Object.create({}, {
         value: (photoUrl) => {
             return fetch("http://localhost:5002/favorites")
                 .then(e => e.json())
-                .then(favorites => this.setState({ favorites: favorites }))
+               
         }
     },
     getAllComments: {
@@ -83,7 +83,7 @@ deleteComment: {
 
   deletePhoto: {
     value: (itemId) => {
-      return fetch(`http://localhost:5002/comments/${itemId}`, {
+      return fetch(`http://localhost:5002/favorites/${itemId}`, {
           method: "DELETE"
       })
     }
