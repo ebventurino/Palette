@@ -1,7 +1,7 @@
 import React from 'react';
 import Favorite from './Favorite'
 import ApiManager from '../APIManager'
-import Favorites from './Favorites'
+import FavoritesState from './FavoritesState'
 //setting props
 const AllFavoriteProps = props => {
     const results = props.data;

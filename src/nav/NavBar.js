@@ -10,7 +10,7 @@ export default class Example extends React.Component {
             <NavLink  href="/">Photos</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/Favorites">Favorites</NavLink>
+            <NavLink href="/FavoritesState">Favorites</NavLink>
           </NavItem>
         </Nav>
         <NavItem>

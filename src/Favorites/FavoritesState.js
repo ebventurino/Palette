@@ -4,7 +4,7 @@ import AllFavoriteProps from './AllFavoriteProps'
 import ApiManager from '../APIManager'
 import Favorite from './Favorite'
 
-export default class Favorites extends Component {
+export default class FavoritesState extends Component {
     
     
   constructor() {
