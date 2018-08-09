@@ -277,3 +277,11 @@ transform: scale(2,2);
     top: 0; /* Position the navbar at the top of the page */
     width: auto; /* Full width */
 }
+
+h1 {
+  text-align: center;
+}
+
+.moreImages {
+  float: right;
+}

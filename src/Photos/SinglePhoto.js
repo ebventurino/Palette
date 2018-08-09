@@ -24,6 +24,7 @@ const SinglePhoto = props => {
     <React-fragment>
       <ul className="photo-list">
         {photos}
+        
       </ul>
 
 
