@@ -8,6 +8,19 @@
     },
     {
       "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "email": "test@test.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "email": "test@test.com",
+      "password": "1234",
+      "id": 5
     }
   ],
   "favorites": [
@@ -28,6 +41,12 @@
       "photoUrl": "https://images.unsplash.com/photo-1533748347742-b2e2ff602786?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=47b0bb1292b6704a772cbb72a5d04e01",
       "UserId": 1,
       "id": 11
+    },
+    {
+      "photoId": "CLZ5DzbbhG0",
+      "photoUrl": "https://images.unsplash.com/photo-1533826418470-0cef7eb8bdaa?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=02e5bf6852f3028ad10dc7f9d75430ba",
+      "UserId": 4,
+      "id": 12
     }
   ],
   "comments": [

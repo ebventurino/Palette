@@ -7,24 +7,34 @@ export default class Login extends Component {
         email: " ",
         password: " "
     }
-    handleRegister = (e) => {
-        e.preventDefault()
 
-        APIManager.registerUser()
-        .then ((taco) => {
-            console.log(taco[0].id)
-           localStorage.setItem(
-                "credentials",
-                JSON.stringify({
-                    email: this.state.email,
-                    password: this.state.password,
-                    userName: this.state.userName,
-                    id: taco[0].id
-                    
+        handleRegister = (e) => {
+            e.preventDefault()
+            const newUser = {
+                email: this.state.email,
+                password: this.state.password,
+            }
+            APIManager.registerUser(newUser)
+                .then((response) => {
+                    const email = response.email
+                    APIManager.getUserByEmail(email)
+                        .then((taco) => {
+                            // console.log(taco[0].id)
+                            localStorage.setItem(
+                                "credentials",
+                                JSON.stringify({
+                                    userName: this.state.userName,
+                                    email: this.state.email,
+                                    password: this.state.password,
+                                    currentUserId: taco[0].id
+    
+                                })
+    
+                            )
+                        })
                 })
-            )
-        })
-    }
+    
+        }
     // Update state whenever an input field is edited
     handleFieldChange = (evt) => {
         const stateToChange = {}
@@ -38,7 +48,7 @@ export default class Login extends Component {
 
         APIManager.getUserByEmail(this.state.email)
         .then ((taco) => {
-            console.log(taco[0].id)
+            console.log(taco, "TACO")
            localStorage.setItem(
                 "credentials",
                 JSON.stringify({
@@ -52,27 +62,14 @@ export default class Login extends Component {
         })
     }
             
-    // handleLogin = (e) => {
-    //     e.preventDefault()
-    //     APIManager.getUserByEmail(this.state.email)
-    //     .then ((taco) => {
-    //         console.log(taco[0].id)
-    //         localStorage.setItem(
-    //             "credentials",
-    //             JSON.stringify({
-    //                 email: this.state.email,
-    //                 password: this.state.password,
-    //                 userName: this.state.userName,
-    //                 currentUserId: taco[0].id
-            
-            
+  
             
         //render the form
     render() {
         return (
             <React.Fragment>
             <div className="App">
-\
+
             <header className="App-header">
             </header>
           </div>
