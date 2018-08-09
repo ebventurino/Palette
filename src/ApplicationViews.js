@@ -5,6 +5,7 @@ import Photos from "./Photos/Photos"
 import App from "./App"
 import FavoritesState from "./Favorites/FavoritesState"
 import Comments from "./Comments/Comments"
+import Header from './header'
 
 
 export default class ApplicationViews extends Component {

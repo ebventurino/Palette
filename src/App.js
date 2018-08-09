@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ApplicationViews from './ApplicationViews'
 import NavBar from './nav/NavBar'
-import header from './header'
+import Header from './header'
 // import NavBar from './nav/NavBar'
 
 
@@ -13,7 +13,7 @@ class App extends Component {
     return (
       
       <React.Fragment>
-      
+        <Header />
         <NavBar />
         <ApplicationViews />
         

@@ -1,6 +1,7 @@
 import React from 'react';
 import Favorite from './Favorite'
 import ApiManager from '../APIManager'
+
 //setting props
 const AllFavoriteProps = props => {
     const results = props.data;
@@ -21,6 +22,7 @@ const AllFavoriteProps = props => {
 
     return (
         <React-fragment>
+            
             <div className="photo-list">
                 {allFavorites}
                 

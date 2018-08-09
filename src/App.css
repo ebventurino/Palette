@@ -253,3 +253,27 @@ transform: scale(2,2);
     overflow:auto;
     border:solid black 2px;
 }
+
+.moreImages {
+  margin-bottom: 100px;
+  color: black;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: limegreen;
+}
+
+.App-logo {
+  overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: auto; /* Full width */
+}
+
+.inner {
+  overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: auto; /* Full width */
+}

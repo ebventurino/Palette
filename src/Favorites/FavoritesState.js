@@ -52,8 +52,9 @@ export default class FavoritesState extends Component {
     render() {
       console.log(this.state.favorites)
       return (
-    
+
           <div className="main-content">
+          
           <h1>Favorites</h1>
             <AllFavoriteProps data={this.state.favorites}
              deleteFavorites= {this.deletePhoto}
