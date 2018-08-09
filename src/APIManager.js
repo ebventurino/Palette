@@ -99,9 +99,9 @@ inputComment: {
 },
 
 
-  updateComment: {
+updateComment: {
     value: (commentsToEdit) => {
-        return fetch(`http://localhost:5002/comments/${commentsToEdit}`, {
+        return fetch(`http://localhost:5002/comments/${commentsToEdit.id}`, {
             method: "PUT",
             body: JSON.stringify(commentsToEdit),
             headers: {
@@ -109,11 +109,9 @@ inputComment: {
             }
         }).then(() => { return fetch("http://localhost:5002/comments") })
             .then(a => a.json())
-        
     }
 }
 })
-  
 
 
 

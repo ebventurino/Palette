@@ -78,11 +78,11 @@ export default class Comments extends Component {
 
     }
     handleEdit = (event) => {
-        const commentList = this.state.commentsToEdit
+        const commentToPut = this.state.commentsToEdit
         event.preventDefault()
         console.log(this.state.commentsToEdit, "comments")
-        ApiManager.handleEdit(commentList)
-            .then(commentlist => {
+        ApiManager.updateComment(commentToPut)
+            .then(commentList => {
                 this.setState({
                     comments: commentList
                 })
@@ -156,10 +156,10 @@ export default class Comments extends Component {
 
                 }
 
-                <form onSubmit={this.handleUpdate}>
+                <form onSubmit={this.handleEdit}>
                     <h1 className="h3 mb-3 font-weight-normal">Edit Comment</h1>
                     <textarea
-                        onSubmit={this.handleEdit.bind(this)}
+                    
                         onChange={this.handleFieldChange}
                         type="textarea"
                         rows="5"
