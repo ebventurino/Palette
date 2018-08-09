@@ -110,6 +110,19 @@ updateComment: {
         }).then(() => { return fetch("http://localhost:5002/comments") })
             .then(a => a.json())
     }
+},
+
+registerUser: {
+    value: (newObject) => {
+        return fetch("http://localhost:5002/users", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newObject)
+        })
+            // When POST is finished, retrieve the new list of tasks
+            .then(e => e.json()) 
+                
+    }
 }
 })
 

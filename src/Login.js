@@ -7,7 +7,24 @@ export default class Login extends Component {
         email: " ",
         password: " "
     }
+    handleRegister = (e) => {
+        e.preventDefault()
 
+        APIManager.registerUser()
+        .then ((taco) => {
+            console.log(taco[0].id)
+           localStorage.setItem(
+                "credentials",
+                JSON.stringify({
+                    email: this.state.email,
+                    password: this.state.password,
+                    userName: this.state.userName,
+                    id: taco[0].id
+                    
+                })
+            )
+        })
+    }
     // Update state whenever an input field is edited
     handleFieldChange = (evt) => {
         const stateToChange = {}
@@ -55,8 +72,8 @@ export default class Login extends Component {
         return (
             <React.Fragment>
             <div className="App">
+\
             <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
             </header>
           </div>
             
@@ -78,6 +95,33 @@ export default class Login extends Component {
                     required="" />
                <button type="submit">
                     Sign in
+                </button>
+            </form>
+
+
+            <div className="App">
+            <header className="App-header">
+            </header>
+          </div>
+            
+            <form onSubmit={this.handleRegister}>
+                <h1 className="h3 mb-3 font-weight-normal">Please Register</h1>
+                <label htmlFor="inputEmail">
+                    Email address
+                </label>
+                <input onChange={this.handleFieldChange} type="email"
+                    id="email"
+                    placeholder="Email address"
+                    required="" autoFocus="" />
+                <label htmlFor="inputPassword">
+                    Password
+                </label>
+                <input onChange={this.handleFieldChange} type="password"
+                    id="password"
+                    placeholder="Password"
+                    required="" />
+               <button type="submit">
+                    Register
                 </button>
             </form>
             </React.Fragment>
