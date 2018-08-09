@@ -9,24 +9,6 @@
   ],
   "favorites": [
     {
-      "photoId": "g3o1jQWXC_Q",
-      "photoUrl": "https://images.unsplash.com/photo-1533679843940-27a4e7d3de5a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=d5f030135be2a9eb9e608be5cab21e1d",
-      "UserId": 1,
-      "id": 1
-    },
-    {
-      "photoId": "g3o1jQWXC_Q",
-      "photoUrl": "https://images.unsplash.com/photo-1533679843940-27a4e7d3de5a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=d5f030135be2a9eb9e608be5cab21e1d",
-      "UserId": 1,
-      "id": 3
-    },
-    {
-      "photoId": "ep416elVnBA",
-      "photoUrl": "https://images.unsplash.com/photo-1533656415749-6c07e8d9531b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=6e2e2f3f7f25b17a882dbb67b2fb21ca",
-      "UserId": 1,
-      "id": 4
-    },
-    {
       "photoId": "1hOwyYPf5Nc",
       "photoUrl": "https://images.unsplash.com/photo-1533656233758-30fa8762bf2c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=70d4a9981ee914fc013715dad453170b",
       "UserId": 1,
@@ -45,16 +27,10 @@
       "id": 7
     },
     {
-      "photoId": "g3o1jQWXC_Q",
-      "photoUrl": "https://images.unsplash.com/photo-1533679843940-27a4e7d3de5a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=d5f030135be2a9eb9e608be5cab21e1d",
+      "photoId": "aGkRYoUqIqg",
+      "photoUrl": "https://images.unsplash.com/photo-1533747796-615b1ee41545?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=305fadc923b5bb0f69d2cd1eb4fe879f",
       "UserId": 1,
-      "id": 8
-    },
-    {
-      "photoId": "X7F41sXafKg",
-      "photoUrl": "https://images.unsplash.com/photo-1533654516594-0f3bdce1c74b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=672a87a8fd1c3e957428ab36d5ce78ce",
-      "UserId": 1,
-      "id": 9
+      "id": 10
     }
   ],
   "comments": [

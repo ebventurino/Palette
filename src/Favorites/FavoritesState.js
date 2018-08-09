@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import AllFavoriteProps from './AllFavoriteProps'
 import ApiManager from '../APIManager'
-import Favorite from './Favorite'
 
 export default class FavoritesState extends Component {
     

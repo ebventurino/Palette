@@ -1,7 +1,5 @@
 import React from 'react';
 import Moment from 'react-moment';
-import Comments from './Comments'
-import ApiManager from '../APIManager'
 
 //setting props
 export default props => {

@@ -1,7 +1,5 @@
 import React from 'react';
-import ApiManager from'../APIManager'
-import FavoritesState from './FavoritesState'
-import AllFavoriteProps from './AllFavoriteProps'
+import AllFavoriteProps from "./AllFavoriteProps"
 
 // adding props, labeled as Favorite
 const Favorite = props => {
