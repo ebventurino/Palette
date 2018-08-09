@@ -11,7 +11,7 @@ export default props => {
 
        
 
-    console.log(props.editComment, "edit comment")
+    console.log(props.inputComment, "edit comment")
     return (
     
    
@@ -27,7 +27,7 @@ export default props => {
             </Moment></h6>
                 {props.message.message}
                 
-                <button onClick={() => props.editComment(props.message.id)}>Edit</button>
+                <button onClick={() => props.inputComment(props.message.id)}>Edit</button>
                 
                 <button onClick={() => props.deleteComment(props.message.id)}>Delete</button>
                 

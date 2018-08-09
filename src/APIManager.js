@@ -91,21 +91,30 @@ deleteComment: {
       
     },
   
-
-  updateComment: {
-    value: (itemId) => {
-        return fetch(`http://localhost:5002/comments/${itemId}`, {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(itemId)
-        })
-        
-            // .then(e => e.json())
+inputComment: { 
+    value: (id) => {
+        return fetch(`http://localhost:5002/comments/${id}`)
+        .then(e => e.json())
     }
 },
 
-  
+
+  updateComment: {
+    value: (commentsToEdit) => {
+        return fetch(`http://localhost:5002/comments/${commentsToEdit}`, {
+            method: "PUT",
+            body: JSON.stringify(commentsToEdit),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(() => { return fetch("http://localhost:5002/comments") })
+            .then(a => a.json())
+        
+    }
+}
 })
+  
+
 
 
 
