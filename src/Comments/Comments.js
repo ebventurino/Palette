@@ -78,13 +78,13 @@ export default class Comments extends Component {
 
     }
     handleEdit = (event) => {
-        const eventList = this.state.commentsToEdit
+        const commentList = this.state.commentsToEdit
         event.preventDefault()
         console.log(this.state.commentsToEdit, "comments")
-        ApiManager.handleEdit(eventList)
-            .then(TaskList => {
+        ApiManager.handleEdit(commentList)
+            .then(commentlist => {
                 this.setState({
-                    tasks: TaskList
+                    comments: commentList
                 })
             })
     }
@@ -93,6 +93,8 @@ export default class Comments extends Component {
         const stateToChange = this.state.commentsToEdit
         stateToChange[event.target.id] = event.target.value
         this.setState({ commentsToEdit: stateToChange })
+        console.log("I am working")
+        console.log(this.state.commentsToEdit.message)
     }
 
 
@@ -101,7 +103,6 @@ export default class Comments extends Component {
             .then(() => {
                 return ApiManager.getAllComments()
             })
-            // .then(a => a.json())
             .then(Comments => {
                 console.log(Comments, "comments")
                 this.setState({
@@ -163,7 +164,7 @@ export default class Comments extends Component {
                         type="textarea"
                         rows="5"
                         cols="80"
-                        id="editComments"
+                        id="message"
                         required=""
                         value={this.state.commentsToEdit.message}
                     />

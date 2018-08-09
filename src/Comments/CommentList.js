@@ -5,13 +5,7 @@ import Moment from 'react-moment';
 export default props => {
    
  
-    console.log(props.message.id,"message.id")
-   
 
-
-       
-
-    console.log(props.inputComment, "edit comment")
     return (
     
    
