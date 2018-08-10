@@ -21,9 +21,9 @@ export default props => {
             </Moment></h6>
                 {props.message.message}
                 
-                <button onClick={() => props.inputComment(props.message.id)}>Edit</button>
+                <button className="button" onClick={() => props.inputComment(props.message.id)}>Edit</button>
                 
-                <button onClick={() => props.deleteComment(props.message.id)}>Delete</button>
+                <button className="button" onClick={() => props.deleteComment(props.message.id)}>Delete</button>
                 
             </div>
 

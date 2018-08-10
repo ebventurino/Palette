@@ -285,3 +285,7 @@ h1 {
 .moreImages {
   float: right;
 }
+
+.button {
+  color:limegreen;
+}

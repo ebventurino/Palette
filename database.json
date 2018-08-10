@@ -25,42 +25,25 @@
   ],
   "favorites": [
     {
-      "photoId": "aGkRYoUqIqg",
-      "photoUrl": "https://images.unsplash.com/photo-1533747796-615b1ee41545?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=305fadc923b5bb0f69d2cd1eb4fe879f",
-      "UserId": 1,
-      "id": 10
-    },
-    {
-      "photoId": "h9m8Xsy-n0Q",
-      "photoUrl": "https://images.unsplash.com/photo-1533748347742-b2e2ff602786?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=47b0bb1292b6704a772cbb72a5d04e01",
-      "UserId": 1,
-      "id": 11
-    },
-    {
-      "photoId": "CLZ5DzbbhG0",
-      "photoUrl": "https://images.unsplash.com/photo-1533826418470-0cef7eb8bdaa?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=02e5bf6852f3028ad10dc7f9d75430ba",
-      "UserId": 4,
-      "id": 12
-    },
-    {
-      "photoId": "LXPgQP9_u00",
-      "photoUrl": "https://images.unsplash.com/photo-1533764625214-b97671494f23?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=497aeada406c1ea6e73ae4786e25abe8",
-      "UserId": 4,
-      "id": 13
-    },
-    {
       "photoId": "Ft-wi9aXPAw",
       "photoUrl": "https://images.unsplash.com/photo-1533743409942-b91130480a7a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=1f54d8c2da55f02b1a54cdf689a1034b",
       "UserId": 4,
       "id": 14
+    },
+    {
+      "photoId": "NYtVYnsyX04",
+      "photoUrl": "https://images.unsplash.com/photo-1533811097408-37b102ee4f2a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=a9a4f44f3e3725e2056488ccf0826564",
+      "UserId": 4,
+      "id": 16
+    },
+    {
+      "photoId": "x4cLB3M81D8",
+      "photoUrl": "https://images.unsplash.com/photo-1533809647112-433f27b871d6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=7b7ebf2a199bef916c4980a7b69d288e",
+      "UserId": 4,
+      "id": 18
     }
   ],
   "comments": [
-    {
-      "message": "I need to pick up magenta paint",
-      "UserId": 4,
-      "id": 11
-    },
     {
       "message": "I would like to make a figurative painting with turquoise and magenta accents",
       "UserId": 4,
@@ -70,6 +53,11 @@
       "message": "NEED NEW BRUSHES!",
       "UserId": 4,
       "id": 13
+    },
+    {
+      "message": "I need to pick up magenta paint\n",
+      "UserId": 4,
+      "id": 14
     }
   ]
 }
