@@ -15,10 +15,11 @@ export default class Comments extends Component {
 
     }
 
+    gettingId = JSON.parse(localStorage.getItem('credentials')).currentUserId
     // main API
     componentDidMount() {
         axios
-            .get('http://localhost:5002/comments')
+            .get(`http://localhost:5002/comments?userId=${this.gettingId}`)
             .then(({ data }) => {
                 console.log(data, "DATA");
                 this.setState({ comments: data })

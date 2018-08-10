@@ -37,63 +37,33 @@
       "id": 16
     },
     {
-      "photoId": "Bu95Rz43y3o",
-      "photoUrl": "https://images.unsplash.com/photo-1533891651759-9771b176afdc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=88a9a9c4801799da562175f7222a6a06",
-      "id": 18
-    },
-    {
-      "photoId": "DXu4o-QI1VY",
-      "photoUrl": "https://images.unsplash.com/photo-1533883355737-25ab4d1fbefb?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=6a224d831def7d74afba6271bebdbd45",
-      "id": 19
-    },
-    {
-      "photoId": "81sSUQoQdJ0",
-      "photoUrl": "https://images.unsplash.com/photo-1533836683024-78f6568c4ce1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=a236f15a28c7227f587431dcc831a36f",
-      "id": 21
-    },
-    {
-      "photoId": "eb0dDGnwfR4",
-      "photoUrl": "https://images.unsplash.com/photo-1533832422535-0e12e90e63a2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=d9893443fc8ddd79f78a4845aed53805",
-      "id": 22
-    },
-    {
       "photoId": "eb0dDGnwfR4",
       "photoUrl": "https://images.unsplash.com/photo-1533832422535-0e12e90e63a2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=d9893443fc8ddd79f78a4845aed53805",
       "id": 23
     },
     {
-      "photoId": "Mt1fkjgdZbg",
-      "photoUrl": "https://images.unsplash.com/photo-1533826176408-0f94d45a041f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=fa48a768127b95e92fdfb50dda8350a6",
+      "photoId": "81sSUQoQdJ0",
+      "photoUrl": "https://images.unsplash.com/photo-1533836683024-78f6568c4ce1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=a236f15a28c7227f587431dcc831a36f",
       "userId": 7,
       "id": 24
     },
     {
-      "photoId": "eb0dDGnwfR4",
-      "photoUrl": "https://images.unsplash.com/photo-1533832422535-0e12e90e63a2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=d9893443fc8ddd79f78a4845aed53805",
+      "photoId": "Mt1fkjgdZbg",
+      "photoUrl": "https://images.unsplash.com/photo-1533826176408-0f94d45a041f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=fa48a768127b95e92fdfb50dda8350a6",
       "userId": 7,
       "id": 25
     }
   ],
   "comments": [
     {
-      "message": "I would like to make a figurative painting with turquoise and magenta accents",
-      "UserId": 4,
-      "id": 12
-    },
-    {
-      "message": "NEED NEW BRUSHES!",
-      "UserId": 4,
-      "id": 13
-    },
-    {
-      "message": "I need to pick up magenta paint\n",
-      "UserId": 4,
-      "id": 14
-    },
-    {
-      "message": "test",
+      "message": "User 7",
       "userId": 7,
-      "id": 15
+      "id": 1
+    },
+    {
+      "message": "User 7",
+      "userId": 7,
+      "id": 2
     }
   ]
 }
