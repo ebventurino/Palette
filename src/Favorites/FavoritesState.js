@@ -14,9 +14,11 @@ export default class FavoritesState extends Component {
   
       };
     }
+
+     gettingId = JSON.parse(localStorage.getItem('credentials')).currentUserId
   // calling favorites which are in JSON, then update state
     componentDidMount() {
-      axios.get('http://localhost:5002/favorites')
+      axios.get(`http://localhost:5002/favorites?userId=${this.gettingId}`)
         .then (response => {
           console.log(response,"RESPONSE")
           this.setState({
@@ -27,8 +29,9 @@ export default class FavoritesState extends Component {
         
         .catch(error => {
           console.log("error", error)
-        });
+        })
     }
+  
   
     deletePhoto = (photoId) => {
       console.log("In the first .then")
