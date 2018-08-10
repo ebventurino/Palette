@@ -7,11 +7,11 @@ const Favorite = props => {
   const gettingFavorites = {
     photoId: props.id,
     photoUrl: props.url,
-    UserId: JSON.parse(localStorage.getItem('credentials')).id,
+    userId: JSON.parse(localStorage.getItem('credentials')).currentUserId,
     id: props.id
   }
 
-  console.log(JSON.parse(localStorage.getItem('credentials')).id)
+  console.log(JSON.parse(localStorage.getItem('credentials')).currentUserId, "USER ID")
 
 
       

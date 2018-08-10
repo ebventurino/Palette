@@ -33,7 +33,7 @@ export default class Comments extends Component {
         const newObject = {
             id: this.state.id,
             message: this.state.message,
-            UserId: JSON.parse(localStorage.getItem('credentials')).id
+            userId: JSON.parse(localStorage.getItem('credentials')).id
         }
         ApiManager.addComment(newObject)
             .then(Response => {
