@@ -20,13 +20,13 @@ const ApiManager = Object.create({}, {
     },
     loadingFavorites: {
         value: (favoriteObject,userId) => {
-            return fetch(`http://localhost:5002/favorites`, {
+            return fetch(`http://localhost:5002/favorites?userId=${userId}`, {
                 method: "POST",
                 body: JSON.stringify(favoriteObject),
                 headers: {
                     "Content-Type": "application/json"
                 }
-            }).then(() => { return fetch("http://localhost:5002/favorites?userId=7") })
+             }).then(() => { return fetch(`http://localhost:5002/favorites?userId=${userId}`) })
                 .then(a => a.json())
         }
     },
