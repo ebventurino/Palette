@@ -2,7 +2,8 @@
 
 This is my Front-End Capstone for Nashville Software School.
 
-![Screenshot](/screenshot.png)
+![](src/PaletteLogo.jpg)
+![Screenshot](src/screenshot.png)
 
 # Tools:
 
