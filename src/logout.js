@@ -21,10 +21,10 @@ export default class Logout extends Component {
         let button;
 
          if (this.state.redirect === true)  {
-             button = <Redirect to = "/Login" />
+             button = <Redirect to = "/" />
          }
 
-         <Redirect to="/Login" />
+         <Redirect to="/" />
         return (
 
             <React.Fragment>

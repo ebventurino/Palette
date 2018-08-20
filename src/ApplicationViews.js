@@ -26,7 +26,7 @@ export default class ApplicationViews extends Component {
                 <Route exact path="/Photos" component={Photos} />
                 <Route exact path="/FavoritesState" component={FavoritesState} />
                 <Route exact path="/Comments" component={Comments}/>
-                <Route path="/Login" component={Login}/>
+                {/* <Route exact path="/" component={Login}/> */}
             
             </React.Fragment>
         )

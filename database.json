@@ -43,18 +43,6 @@
   ],
   "favorites": [
     {
-      "photoId": "WHJTaLqonkU",
-      "photoUrl": "https://images.unsplash.com/photo-1534620808146-d33bb39128b2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=222c40d795383ad7cf1fbc75849b4060",
-      "userId": 13,
-      "id": 30
-    },
-    {
-      "photoId": "VKrwLT1FkbA",
-      "photoUrl": "https://images.unsplash.com/photo-1534628369946-daf0d41fcea3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=80b451c79ebbf7bde217ad4be40e881e",
-      "userId": 13,
-      "id": 33
-    },
-    {
       "photoId": "VKrwLT1FkbA",
       "photoUrl": "https://images.unsplash.com/photo-1534628369946-daf0d41fcea3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=80b451c79ebbf7bde217ad4be40e881e",
       "userId": 17,
@@ -71,19 +59,39 @@
       "photoUrl": "https://images.unsplash.com/photo-1534759846116-5799c33ce22a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=74716ea6f42766c26f6892c9e9bd70bf",
       "userId": 13,
       "id": 38
+    },
+    {
+      "photoId": "sAYb9Cg7C70",
+      "photoUrl": "https://images.unsplash.com/photo-1533157950006-c38844053d55?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=787b057d7e855d5538cdbb6f0d9277af",
+      "userId": 13,
+      "id": 42
+    },
+    {
+      "photoId": "T1Wru10gKhg",
+      "photoUrl": "https://images.unsplash.com/photo-1534766664852-7dbfbf053c4c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=a2b56ab0d962f1b6409c5331049d2acc",
+      "userId": 13,
+      "id": 43
+    },
+    {
+      "photoId": "Sl1GrFYrQ1E",
+      "photoUrl": "https://images.unsplash.com/photo-1534775635547-42a604a58f1a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=b5b37274c16fec6e8b360ea6d5d8d3c6",
+      "userId": 13,
+      "id": 44
+    },
+    {
+      "photoId": "TV45u3CBfvU",
+      "photoUrl": "https://images.unsplash.com/photo-1534750817431-4f0280359fe7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=ed2627d89afed1d61debf4bcdbcadccf",
+      "userId": 13,
+      "id": 45
+    },
+    {
+      "photoId": "bf0FRl7p_rE",
+      "photoUrl": "https://images.unsplash.com/photo-1534754789238-6250d515412f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=b40121934faf90a813780ac48e8815fe",
+      "userId": 13,
+      "id": 46
     }
   ],
   "comments": [
-    {
-      "message": "testing",
-      "userId": 13,
-      "id": 2
-    },
-    {
-      "message": "dddfgffg",
-      "userId": 13,
-      "id": 3
-    },
     {
       "message": "test!!!!",
       "userId": 17,
@@ -98,6 +106,16 @@
       "message": "testt!!",
       "userId": 17,
       "id": 26
+    },
+    {
+      "message": "I need to get blue paint",
+      "userId": 13,
+      "id": 27
+    },
+    {
+      "message": "I want to make a figure painting using blue and magenta",
+      "userId": 13,
+      "id": 28
     }
   ]
 }
