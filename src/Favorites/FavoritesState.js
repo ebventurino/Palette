@@ -27,17 +27,20 @@ export default class FavoritesState extends Component {
           });
         })
         
-        .catch(error => {
-          console.log("error", error)
-        })
+        // .catch(error => {
+        //   console.log("error", error)
+       // })
     }
   
   
-    deletePhoto = (photoId) => {
+    deletePhoto = (photoId,userId) => {
+      // e.preventDefault();
       console.log("In the first .then")
       ApiManager.deletePhoto(photoId)
-          .then(() => {
-              return ApiManager.getAllFavorites()
+          .then((newFavorites) => {
+            console.log(newFavorites,"new favorites")
+            console.log(userId, "userId")
+              return ApiManager.getAllFavorites(userId)
               
           }) 
           .then(favorites => {
@@ -45,7 +48,9 @@ export default class FavoritesState extends Component {
               console.log("In the second .then")
               this.setState({
                   favorites: favorites
+                  
               });
+              
           });
 
       

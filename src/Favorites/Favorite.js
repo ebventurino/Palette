@@ -22,11 +22,12 @@ return (
   <React-fragment>
     <li className="photo-wrap">
       <img src={props.url} alt="" />
-      <button className="deleteButton"onClick={() => props.deleteFavorites(gettingFavorites.id)}>delete</button>
+      <button className="deleteButton"onClick={() => props.deleteFavorites(gettingFavorites.id,gettingFavorites.userId)}>delete</button>
    </li>
-
   </React-fragment>
 )
 }
 
 export default Favorite;
+
+//{() => window.location.reload()}

@@ -26,13 +26,14 @@ const ApiManager = Object.create({}, {
                 headers: {
                     "Content-Type": "application/json"
                 }
-             }).then(() => { return fetch(`http://localhost:5002/favorites?userId=${userId}`) })
+             })
+             .then(() => { return fetch(`http://localhost:5002/favorites?userId=${userId}`) })
                 .then(a => a.json())
         }
     },
     getAllFavorites: {
-        value: (photoUrl) => {
-            return fetch("http://localhost:5002/favorites")
+        value: (userId) => {
+            return fetch(`http://localhost:5002/favorites?userId=${userId}`)
                 .then(e => e.json())
                
         }
@@ -85,7 +86,9 @@ deleteComment: {
     value: (itemId) => {
       return fetch(`http://localhost:5002/favorites/${itemId}`, {
           method: "DELETE"
-        }).then(() => { return fetch("http://localhost:5002/favorites/") })
+         })
+         .then(e => e.json())
+         //.then(() => { return fetch("http://localhost:5002/favorites/") })
           
       }
       
