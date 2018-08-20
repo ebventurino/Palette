@@ -1,8 +1,7 @@
 ![](src/PaletteLogo.jpg)
 
-# This is my Front-End Capstone for Nashville Software School.
+## This is my Front-End Capstone for Nashville Software School.
 
-![](src/PaletteLogo.jpg)
 ![Screenshot](src/screenshot.png)
 
 # Tools:
