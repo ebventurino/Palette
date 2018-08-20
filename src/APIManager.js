@@ -15,7 +15,7 @@ const ApiManager = Object.create({}, {
             const databaseString = localStorage.getItem("credentials")
             const currentUserObject = JSON.parse(databaseString)
             console.log("User stuff", currentUserObject)
-            return currentUserObject.currentUserId
+            return currentUserObject.userId
         }
     },
     loadingFavorites: {
@@ -39,8 +39,8 @@ const ApiManager = Object.create({}, {
         }
     },
     getAllComments: {
-        value: (userInput) => {
-            return fetch(`http://localhost:5002/comments`)
+        value: (userId) => {
+            return fetch(`http://localhost:5002/comments?userId=${userId}`)
                 .then(e => e.json())
 
         }
@@ -95,8 +95,8 @@ deleteComment: {
     },
   
 inputComment: { 
-    value: (id) => {
-        return fetch(`http://localhost:5002/comments/${id}`)
+    value: (userId) => {
+        return fetch(`http://localhost:5002/comments/${userId}`)
         .then(e => e.json())
     }
 },
@@ -116,11 +116,11 @@ updateComment: {
 },
 
 registerUser: {
-    value: (newObject) => {
+    value: (newUser) => {
         return fetch("http://localhost:5002/users", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(newObject)
+            body: JSON.stringify(newUser)
         })
             // When POST is finished, retrieve the new list of tasks
             .then(e => e.json()) 

@@ -7,17 +7,16 @@ const Favorite = props => {
   const gettingFavorites = {
     photoId: props.id,
     photoUrl: props.url,
-    userId: JSON.parse(localStorage.getItem('credentials')).currentUserId,
+    userId: JSON.parse(localStorage.getItem('credentials')).userId,
     id: props.id
   }
 
-  console.log(JSON.parse(localStorage.getItem('credentials')).currentUserId, "USER ID")
+  console.log(JSON.parse(localStorage.getItem('credentials')).userId, "USER ID")
 
 
       
 console.log(props, "props")
 
- //rendering photo.url via props
 return (
   <React-fragment>
     <li className="photo-wrap">
@@ -30,4 +29,3 @@ return (
 
 export default Favorite;
 
-//{() => window.location.reload()}

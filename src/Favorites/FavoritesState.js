@@ -15,7 +15,7 @@ export default class FavoritesState extends Component {
       };
     }
 
-     gettingId = JSON.parse(localStorage.getItem('credentials')).currentUserId
+     gettingId = JSON.parse(localStorage.getItem('credentials')).userId
   // calling favorites which are in JSON, then update state
     componentDidMount() {
       axios.get(`http://localhost:5002/favorites?userId=${this.gettingId}`)

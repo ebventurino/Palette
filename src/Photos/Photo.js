@@ -6,7 +6,7 @@ const Photo = props => {
  const gettingPhotos = {
    photoId: props.photo.id,
    photoUrl: props.url,
-   userId: JSON.parse(localStorage.getItem('credentials')).currentUserId
+   userId: JSON.parse(localStorage.getItem('credentials')).userId
  }
  console.log(gettingPhotos,"gettingPhotos")
 

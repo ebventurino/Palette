@@ -15,7 +15,7 @@ export default class Comments extends Component {
 
     }
 
-    gettingId = JSON.parse(localStorage.getItem('credentials')).currentUserId
+    gettingId = JSON.parse(localStorage.getItem('credentials')).userId
     // main API
     componentDidMount() {
         axios
@@ -34,7 +34,7 @@ export default class Comments extends Component {
         const newObject = {
             id: this.state.id,
             message: this.state.message,
-            userId: JSON.parse(localStorage.getItem('credentials')).currentUserId
+            userId: JSON.parse(localStorage.getItem('credentials')).userId
         }
         ApiManager.addComment(newObject)
             .then(Response => {
@@ -118,6 +118,7 @@ export default class Comments extends Component {
     inputComment = (id) => {
         ApiManager.inputComment(id)
             .then(Comments => {
+                console.log(id, "ID")
                 console.log(Comments, "comments")
                 this.setState({
                     commentsToEdit: Comments

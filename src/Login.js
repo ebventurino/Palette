@@ -8,33 +8,33 @@ export default class Login extends Component {
         password: " "
     }
 
-        handleRegister = (e) => {
-            e.preventDefault()
-            const newUser = {
-                email: this.state.email,
-                password: this.state.password,
-            }
-            APIManager.registerUser(newUser)
-                .then((response) => {
-                    const email = response.email
-                    APIManager.getUserByEmail(email)
-                        .then((taco) => {
-                            // console.log(taco[0].id)
-                            localStorage.setItem(
-                                "credentials",
-                                JSON.stringify({
-                                    userName: this.state.userName,
-                                    email: this.state.email,
-                                    password: this.state.password,
-                                    currentUserId: taco[0].id
-    
-                                })
-    
-                            )
-                        })
-                })
-    
+    handleRegister = (e) => {
+        e.preventDefault()
+        const newUser = {
+            email: this.state.email,
+            password: this.state.password,
         }
+        APIManager.registerUser(newUser)
+            .then((response) => {
+                const email = response.email
+                APIManager.getUserByEmail(email)
+                    .then((taco) => {
+                        // console.log(taco[0].id)
+                        localStorage.setItem(
+                            "credentials",
+                            JSON.stringify({
+                                userName: this.state.userName,
+                                email: this.state.email,
+                                password: this.state.password,
+                                userId: taco[0].id
+
+                            })
+
+                        )
+                    })
+            })
+
+    }
     // Update state whenever an input field is edited
     handleFieldChange = (evt) => {
         const stateToChange = {}
@@ -55,7 +55,7 @@ export default class Login extends Component {
                     email: this.state.email,
                     password: this.state.password,
                     userName: this.state.userName,
-                    id: taco[0].id
+                    userId: taco[0].id
                     
                 })
             )

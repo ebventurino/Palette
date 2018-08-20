@@ -13,7 +13,7 @@ const AllFavoriteProps = props => {
             deleteFavorites= {props.deleteFavorites}
             favorites={favorites}
             id={favorites.id}
-            userId={JSON.parse(localStorage.getItem('credentials')).currentUserId}
+            userId={JSON.parse(localStorage.getItem('credentials')).userId}
              />
              
     ); 
