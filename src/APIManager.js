@@ -103,14 +103,20 @@ inputComment: {
 
 
 updateComment: {
-    value: (commentsToEdit) => {
+    value: (commentsToEdit,userId) => {
+        console.log(commentsToEdit, "update Comment")
         return fetch(`http://localhost:5002/comments/${commentsToEdit.id}`, {
             method: "PUT",
             body: JSON.stringify(commentsToEdit),
             headers: {
                 "Content-Type": "application/json"
             }
-        }).then(() => { return fetch("http://localhost:5002/comments") })
+        }).then((
+
+        ) => { return fetch(`http://localhost:5002/comments?userId=${userId}`) }
+    )
+
+        
             .then(a => a.json())
     }
 },

@@ -67,7 +67,7 @@ export default class Comments extends Component {
     deleteComment = (commentId) => {
         ApiManager.deleteComment(commentId)
             .then(() => {
-                return ApiManager.getAllComments()
+                return ApiManager.getAllComments(JSON.parse(localStorage.getItem('credentials')).userId)
             })
             .then(Comments => {
                 console.log(Comments, 'comments')
@@ -81,8 +81,9 @@ export default class Comments extends Component {
         const commentToPut = this.state.commentsToEdit
         event.preventDefault()
         console.log(this.state.commentsToEdit, "comments")
-        ApiManager.updateComment(commentToPut)
+        ApiManager.updateComment(commentToPut,JSON.parse(localStorage.getItem('credentials')).userId)
             .then(commentList => {
+                console.log(commentList, "commentList")
                 this.setState({
                     comments: commentList
                 })
@@ -114,11 +115,10 @@ export default class Comments extends Component {
 
 
    
-    inputComment = (id) => {
-        ApiManager.inputComment(id)
+    inputComment = (userId) => {
+        ApiManager.inputComment(userId)
             .then(Comments => {
-                console.log(id, "ID")
-                console.log(Comments, "comments")
+                console.log(userId, "ID") 
                 this.setState({
                     commentsToEdit: Comments
 
