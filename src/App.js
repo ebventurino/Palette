@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ApplicationViews from './ApplicationViews'
 import NavBar from './nav/NavBar'
 import Header from './header'
+import Logout from './logout'
 // import NavBar from './nav/NavBar'
 
 
@@ -14,6 +15,7 @@ class App extends Component {
       
       <React.Fragment>
         <Header />
+        <Logout />
         <NavBar />
         <ApplicationViews />
         
