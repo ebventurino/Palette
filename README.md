@@ -1,8 +1,9 @@
-# * Palette *
+# Palette 
 
 This is my Front-End Capstone for Nashville Software School.
 
-![](PaletteLogo.jpg)
+![](/PaletteLogo.jpg)
+![Screenshot](screenshot.png)
 
 # Tools:
 
