@@ -32,8 +32,7 @@ export default class Comments extends Component {
 
     addComment = (e) => {
         const newObject = {
-            id: this.state.id,
-            message: this.state.message,
+            message: this.state.newComment.message,
             userId: JSON.parse(localStorage.getItem('credentials')).userId
         }
         ApiManager.addComment(newObject)
@@ -55,9 +54,9 @@ export default class Comments extends Component {
         // e.preventDefault();
         const stateToChange = {}
         stateToChange[e.target.id] = e.target.value
-        this.setState(stateToChange)
+        this.setState({newComment:stateToChange})
 
-        ApiManager.getAllComments()
+        ApiManager.getAllComments(JSON.parse(localStorage.getItem('credentials')).userId)
             .then(Comments => {
                 this.setState({
                     comments: Comments
@@ -141,7 +140,7 @@ export default class Comments extends Component {
                             placeholder="Notes"
                             required="" autoFocus="" />
                     </label>
-                    <button type="submit" value="Submit" className="submit" onClick={this.commentFormInput}>Add Comment</button>
+                    <button type="submit" value="Submit" className="submit">Add Comment</button>
 
                 </form>
 
