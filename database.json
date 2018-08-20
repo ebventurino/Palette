@@ -61,12 +61,6 @@
       "id": 38
     },
     {
-      "photoId": "sAYb9Cg7C70",
-      "photoUrl": "https://images.unsplash.com/photo-1533157950006-c38844053d55?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=787b057d7e855d5538cdbb6f0d9277af",
-      "userId": 13,
-      "id": 42
-    },
-    {
       "photoId": "T1Wru10gKhg",
       "photoUrl": "https://images.unsplash.com/photo-1534766664852-7dbfbf053c4c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjMyMjczfQ&s=a2b56ab0d962f1b6409c5331049d2acc",
       "userId": 13,
@@ -108,7 +102,7 @@
       "id": 26
     },
     {
-      "message": "I need to get blue paint",
+      "message": "I need to get blue paint!!!",
       "userId": 13,
       "id": 27
     },

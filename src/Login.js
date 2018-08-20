@@ -90,7 +90,7 @@ export default class Login extends Component {
                     id="password"
                     placeholder="Password"
                     required="" />
-               <button type="submit">
+               <button type="submit"onClick={() => window.location.reload()}>
                     Sign in
                 </button>
             </form>
